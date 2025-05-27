@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="Img/icono1.jpg" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=laundry" />
+    <title>Principal - PATY SPORT</title>
+</head>
+
+<!-- Inicio de encabezado-->
+<body class="top-margin">  
+    <nav class="navbar navbar-dark bg-dark">   
+        <div class="container-fluid">  
+            <!-- Contenedor de los íconos de usuario -->
+            <div class="d-flex align-items-center ms-2">
+                <a href="./Inicio/InicioSesionIndex.html" class="d-flex align-items-center text-decoration-none text-white">
+                    <i class="bi bi-person-circle fs-4 me-2"></i>
+                    <span class="fw-semibold">Iniciar Sesión</span>
+                </a>
+            </div>
+            
+            
+            <!-- Centramos el nombre "Deporte & Estilo" -->
+            <a class="navbar-brand mx-auto" href="#">Deporte & Estilo</a>  
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"  
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">  
+                <span class="navbar-toggler-icon"></span>  
+            </button>  
+            
+            <div class="collapse navbar-collapse" id="navbarText">  
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">  
+                    <li class="nav-item">  
+                        <a class="nav-link" href="Conocenos.html">Conócenos</a>  
+                    </li>  
+                    <li class="nav-item">  
+                        <a class="nav-link" href="#58">Contáctanos</a>  
+                    </li>  
+                    <li class="nav-item">  
+                        <a class="nav-link" href="#mapp">Donde encontrarnos</a>  
+                    </li>  
+                </ul>  
+            </div>  
+        </div>  
+    </nav>
+
+    <!-- Incluye Bootstrap Icons -->  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">  
+</body>
+    <!-- Fin de encabezado-->
+
+
+<!-- API WHATSAPP-->
+<div class="whatsapp-float" id="whatsapp-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</div>
+
+<script>
+    document.getElementById("whatsapp-btn").addEventListener("click", function() {
+        window.open("https://wa.me/31022844319", "_blank"); 
+    }); 
+</script>
+
+<div class="instagram-float" id="instagram-btn">
+    <a href="https://www.instagram.com/patysport90/profilecard/?igsh=MWl4cmpmcHdlbGI1bg%3D%3D" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+    </a>
+</div>
+
+
+<style>
+.instagram-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; 
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.instagram-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.instagram-float:hover {
+    transform: scale(1.1);
+}
+
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+
+
+    </style>
+    <!--Inicio de PATY SPORT en movimiento-->
+    <div class="hero">
+        <h1 class="texto">PATY SPORT</h1>
+    </div>
+    <!--Fin de PATY SPORT en movimiento-->
+
+
+    <!--Inicio carrucel-->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Img/rojo.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="Img/banner2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="Img/banner.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--fin de carrusel-->
+
+
+    <!-- Inicio Productos-->
+    <h1 class="heading3" style="background-color: #000000; color:#ffffff;"> Ultimos <span> diseños </span>   <span class="material-symbols-outlined" style="font-size: 30px;">
+        laundry
+        </span></h1>
+    <p>
+    <div class="container5">
+        <div class="row">
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1542406775-ade58c52d2e4?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Sudadera Blanca">
+                        <div class="card-body">
+                            <h5 class="card-title"><br>Conjunto Sudadera Blanca</br></h5>
+                            <p class="card-text">Esta sudadera es perfecta para cualquier ocasión. Combina comodidad y
+                                estilo, ideal para un look casual.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/flagged/photo-1579014135854-c93594ffef30?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Sudadera Gris">
+                        <div class="card-body">
+                            <h5 class="card-title"><br>Conjunto Sudadera Gris</br></h5>
+                            <p class="card-text">Esta sudadera gris ofrece un estilo moderno y minimalista. Es muy
+                                cómoda y es perfecta para combinar con unos jeans o leggings.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1565693413579-8ff3fdc1b03b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            class="card-img-top" alt="Sudadera Rosada">
+                        <div class="card-body">
+                            <h5 class="card-title"><br>Conjunto Sudadera Rosada</br></h5>
+                            <p class="card-text">Vibrante y llena de energía, esta sudadera rosada es una declaración de
+                                estilo. Ideal para días frescos y para destacar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1542925581-8db3deffbebb?q=80&w=1992&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="Sudadera Negra">
+                        <div class="card-body">
+                            <h5 class="card-title"><br>Conjunto Sudadera Negra</br></h5>
+                            <p class="card-text">La sudadera negra es un clásico que nunca falla. Su versatilidad
+                                permite combinarla con cualquier atuendo, manteniendo un look elegante y sobrio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <h1 class="heading3" id="mapp"  > Donde <span> Ubicarnos </h1>
+    <div id="map"></div>
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaNx7fpLHfQPGYN2pOB9IskC7CLb7Fg0A&callback=console.debug&libraries=maps,marker&v=beta">
+</script>
+<style>
+  
+  gmp-map {
+    height: 70%;
+  }
+
+ 
+  html,
+  body {
+    height: 100%;
+  
+  }
+</style>
+
+<gmp-map center="4.5127272605896,-74.1153793334961" zoom="18" map-id="DEMO_MAP_ID">
+    <gmp-advanced-marker style="height: 100%;" position="4.5127272605896,-74.1153793334961" title="My location"></gmp-advanced-marker>
+  </gmp-map>
+
+
+<br>
+<br>
+<br>
+
+<hr><div class="d-flex justify-content-center align-items-start" style="height: 100vh;  margin-top: -12%;">
+    <div class="container my-4" id="4">
+        <div class="row" >
+            <h2 >Contáctanos</h2>
+            <div class="col-md-8" id="58">
+                <form id="contactForm" class="contac" action="https://formspree.io/f/mvgoggqv" method="POST">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Tu nombre"
+                                required>
+                            <div class="invalid-feedback" id="name-error"></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Tel:</label>
+                            <input type="number" class="form-control" id="phone" name="phone" placeholder="Tu teléfono"
+                                required>
+                            <div class="invalid-feedback" id="phone-error"></div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="form-label">Correo:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo"
+                            required>
+                        <div class="invalid-feedback" id="email-error"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="comments" class="form-label">Comentarios:</label>
+                        <textarea class="form-control" id="comments" name="comments" rows="4"
+                            placeholder="Tus comentarios"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+            <div class="col-md-4">
+                <h5>Correo:</h5>
+                <p>Patysport90@gmail.com</p>
+                <h5>Dirección:</h5>
+                <p>Tv 2 este #83-83sur</p>
+                <h5>Ciudad:</h5>
+                <p>Bogotá - Colombia</p>
+                <h5>Número:</h5>
+                <p>601-1578 Ext: 333</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <style>
+        .form-label {
+            color: #000000;
+        }
+
+        .form-control {
+            border: 1px solid #000000;
+        }
+
+
+        /* Estilos para el contenedor del formulario */
+        #contactForm {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+    
+        /* Estilos para los campos de texto */
+        #contactForm input[type="text"],
+        #contactForm input[type="email"],
+        #contactForm textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    
+        /* Estilos para el botón de envío */
+        #contactForm button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    
+        #contactForm button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    
+        /* Estilos para los mensajes de alerta */
+        .alert {
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+    
+        .alert-success {
+            background-color: #dff0d8;
+            color: #3c763d;
+            border-color: #d6e9c6;
+        }
+    
+        .alert-error {
+            background-color: #f2dede;
+            color: #a94442;
+            border-color: #ebccd1;
+        }
+    </style>
+    
+    <script>
+        const $contactForm = document.querySelector('#contactForm')
+    
+        $contactForm.addEventListener('submit', handleSubmit)
+    
+        async function handleSubmit(event) {
+            event.preventDefault()
+            const contactForm = new FormData($contactForm)
+            const response = await fetch($contactForm.action, {
+                method: $contactForm.method,
+                body: contactForm,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            if (response.ok) {
+                $contactForm.reset()
+                showAlert('Gracias por contactarnos, te responderemos pronto', 'success')
+            } else {
+                showAlert('Ocurrió un error, por favor intenta nuevamente', 'error')
+            }
+        }
+    
+        function showAlert(message, type) {
+            const alertBox = document.createElement('div')
+            alertBox.className = `alert alert-${type}`
+            alertBox.textContent = message
+            $contactForm.prepend(alertBox)
+            
+            setTimeout(() => {
+                alertBox.remove()
+            }, 5000)
+        }
+    </script>
+    
+
+    
+
+
+
+    <footer
+        style="padding: 20px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #000000; color: #fff; text-align: center;">
+        <h2 class="footer2" style="font-size: 17px;">Contacto: Patysport90@gmail.com | Teléfono: 3102283419</h2>
+    </footer>
+
+
+
+
+
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slides img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        setInterval(nextSlide, 5000); // Cambia de imagen cada 3 segundos
+        showSlide(currentSlide);
+    </script>
+
+
+
+
+
+</body>
+
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
