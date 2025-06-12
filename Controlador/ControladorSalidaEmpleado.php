@@ -8,8 +8,8 @@ $producto = $gestorSalida->ConsultarProducto();
 $elegirAcciones = isset($_POST['Acciones']) ? $_POST['Acciones'] : "Cargar";  
 
 try {
-    if ($elegirAcciones == 'Agregar Salida') {
-        error_log(print_r($_POST, true)); 
+   if ($elegirAcciones == 'Agregar Salida') {
+        error_log("Acción: Agregar Salida ejecutada.");
         $gestorSalida->agregarSalida(
             $_POST['FechaSalida'],                  
             $_POST['Cantidad'],                     
