@@ -1,7 +1,7 @@
 <?php
-require_once '../Modelo/Salida.php'; 
+use '../Modelo/Salida.php';
 
-$gestorSalida = new Salida(); 
+$gestorSalida = new Salida();
 $producto = $gestorSalida->ConsultarProducto();
 
 $elegirAcciones = isset($_POST['Acciones']) ? $_POST['Acciones'] : "Cargar";
@@ -42,5 +42,5 @@ try {
     exit();
 }
 
-include_once "../Vista/VistaSalidaEmpleado.php";
-?>
+use "../Vista/VistaSalidaEmpleado.php";
+
