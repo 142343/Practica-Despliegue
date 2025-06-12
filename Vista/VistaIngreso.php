@@ -750,9 +750,9 @@ thead th {
                        
                     </div>
 
-
-                    <div class="mb-3 d-flex align-items-center">
-                        <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Empleado</label>
+<div class="mb-3 d-flex align-items-center">
+  <label for="producto" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Empleado</label>
+  <input type="text" id="producto" name="producto" class="form-control">
                         <select name="Empleado" id="Empleado" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" required>
                             <option value="">Seleccione Empleado...</option>
                             <?php while($row=mysqli_fetch_assoc($sqlpe)){?>
