@@ -10,7 +10,8 @@ require '../PHPMailer/src/PHPMailer.php';
 require '../PHPMailer/src/SMTP.php';
 
 // Conexión segura a la base de datos con usuario protegido (NO usar root)
-$mysqli = new mysqli("localhost", "paty_user", "TuContraseñaSegura123!", "paty_sport");
+$mysqli = new mysqli("localhost", "root", "", "paty_sport");
+
 
 // Verificar la conexión
 if ($mysqli->connect_errno) {
