@@ -1,5 +1,5 @@
-<?php  
-require_once '../Modelo/Salida.php';  
+<?php
+use '../Modelo/Salida.php';
 
 // Definir excepción personalizada
 class DatosFormularioInvalidosException extends Exception {}
@@ -32,7 +32,7 @@ try {
         $codigoProducto = filter_input(INPUT_POST, 'CodigoProducto', FILTER_SANITIZE_STRING);
         $resultado = $gestorSalida->consultarSalida($codigoProducto);
     } else {
-        $resultado = $gestorSalida->consultarSalida(); 
+        $resultado = $gestorSalida->consultarSalida();
     }
 } catch (DatosFormularioInvalidosException $e) {
     // Error de validación
@@ -44,5 +44,4 @@ try {
     exit("Ha ocurrido un error. Contacte al administrador.");
 }
 
-include_once "../Vista/VistaSalida.php";  
-?>
+use "../Vista/VistaSalida.php";
