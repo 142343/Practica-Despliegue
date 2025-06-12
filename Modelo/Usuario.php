@@ -1,5 +1,5 @@
 <?php
-include_once 'Conexion.php';
+use 'Conexion.php';
 
 class Usuario
 {
@@ -29,7 +29,7 @@ class Usuario
     }
 
     public function agregarUsuario($Tipo_Documento, $Num_Documento, $Nombres, $Apellidos, $Teléfono, $Correo, $RolidRol, $EstadoCodigoEstado, $GeneroidGenero)
-    {        
+    {
         $this->Conexion = Conectarse();
     
         $sql = "INSERT INTO usuario (Tipo_Documento, Num_Documento, Nombres, Apellidos, Teléfono, Correo, RolidRol, EstadoCodigoEstado, GeneroidGenero)
@@ -45,19 +45,19 @@ public function consultarUsuario($Num_Documento = null)
 {
     $resultado = null;
     
-    if ($Num_Documento === null) { 
-        $sql = "SELECT Tipo_Documento, Num_Documento, Nombres, Apellidos, Teléfono, Correo, 
+    if ($Num_Documento === null) {
+        $sql = "SELECT Tipo_Documento, Num_Documento, Nombres, Apellidos, Teléfono, Correo,
         (SELECT tipoRol FROM rol WHERE usuario.RolidRol=idRol) AS RolidRol,
-        (SELECT tipoEstado FROM estado WHERE usuario.EstadoCodigoEstado=CodigoEstado) AS EstadoCodigoEstado, 
-        (SELECT Nombre FROM genero WHERE usuario.GeneroidGenero= idGenero) AS GeneroidGenero 
+        (SELECT tipoEstado FROM estado WHERE usuario.EstadoCodigoEstado=CodigoEstado) AS EstadoCodigoEstado,
+        (SELECT Nombre FROM genero WHERE usuario.GeneroidGenero= idGenero) AS GeneroidGenero
         from usuario;";
 
         $resultado = $this->Conexion->query($sql);
     } else {
-        $sql = "SELECT Tipo_Documento, Num_Documento, Nombres, Apellidos, Teléfono, Correo, 
+        $sql = "SELECT Tipo_Documento, Num_Documento, Nombres, Apellidos, Teléfono, Correo,
         (SELECT tipoRol FROM rol WHERE usuario.RolidRol=idRol) AS RolidRol,
-        (SELECT tipoEstado FROM estado WHERE usuario.EstadoCodigoEstado=CodigoEstado) AS EstadoCodigoEstado, 
-        (SELECT Nombre FROM genero WHERE usuario.GeneroidGenero= idGenero) AS GeneroidGenero 
+        (SELECT tipoEstado FROM estado WHERE usuario.EstadoCodigoEstado=CodigoEstado) AS EstadoCodigoEstado,
+        (SELECT Nombre FROM genero WHERE usuario.GeneroidGenero= idGenero) AS GeneroidGenero
         from usuario WHERE Num_Documento= ?";
 
         $stmt = $this->Conexion->prepare($sql);
@@ -102,16 +102,16 @@ public function consultarUsuario($Num_Documento = null)
 
     public function ConsultarRol()
     {
-        $sql = "SELECT idRol, tipoRol FROM rol"; 
+        $sql = "SELECT idRol, tipoRol FROM rol";
         $resultado = $this->Conexion->query($sql);
         return $resultado;
     }
     
-    public function ConsultarEstado()  
-    {  
-        $sql = "SELECT CodigoEstado, tipoEstado FROM estado WHERE tipoEstado <> 'AGOTADO'";  
-        $resultado = $this->Conexion->query($sql);  
-        return $resultado;  
+    public function ConsultarEstado()
+    {
+        $sql = "SELECT CodigoEstado, tipoEstado FROM estado WHERE tipoEstado <> 'AGOTADO'";
+        $resultado = $this->Conexion->query($sql);
+        return $resultado;
     }
 
     public function ConsultarGenero()
