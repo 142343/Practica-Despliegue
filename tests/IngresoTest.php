@@ -2,9 +2,9 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../Modelo/Ingreso.php';
-require_once __DIR__ . '/../Modelo/Producto.php'; // Necesario para consultar el stock del producto
-include_once __DIR__ . '/../Modelo/Conexion.php'; // Asegúrate de que la ruta sea correcta
+use __DIR__ . '/../Modelo/Ingreso.php';
+use __DIR__ . '/../Modelo/Producto.php'; // Necesario para consultar el stock del producto
+use __DIR__ . '/../Modelo/Conexion.php'; // Asegúrate de que la ruta sea correcta
 
 class IngresoTest extends TestCase
 {
@@ -55,8 +55,7 @@ class IngresoTest extends TestCase
 
     public function testConsultarTodosLosIngresos()
     {
-        $resultado = $this->ingreso->consultarIngreso(); // Sin parámetro consulta todos
-
+        $resultado = $this->ingreso->consultarIngreso();
         $this->assertInstanceOf(\mysqli_result::class, $resultado, 'consultarIngreso sin parámetro debería devolver un objeto mysqli_result');
         $this->assertGreaterThanOrEqual(0, $resultado->num_rows, 'Debería devolver al menos cero ingresos');
 
