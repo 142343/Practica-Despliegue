@@ -1,8 +1,6 @@
 <?php
-// Cargar el autoloader de Composer si estás usando uno, o asegúrate de tener un autoload configurado
-// require_once '../vendor/autoload.php'; // (si usas Composer)
-
 use Modelo\Ingreso;
+use Modelo\IngresoException;
 
 $gestorIngreso = new Ingreso();
 $elegirAcciones = isset($_POST['Acciones']) ? $_POST['Acciones'] : "Cargar";
@@ -26,7 +24,7 @@ try {
                 $_POST['Empleado']
             );
         } else {
-            throw new Exception("Faltan datos para agregar ingreso");
+            throw new IngresoException("Faltan datos para agregar ingreso");
         }
     } elseif ($elegirAcciones == 'Actualizar Ingreso') {
         if (
@@ -50,25 +48,28 @@ try {
                 $_POST['Empleado']
             );
         } else {
-            throw new Exception("Faltan datos para actualizar ingreso");
+            throw new IngresoException("Faltan datos para actualizar ingreso");
         }
     } elseif ($elegirAcciones == 'Borrar Ingreso') {
         if (isset($_POST['idTicketIngreso'])) {
             $gestorIngreso->borrarIngreso($_POST['idTicketIngreso']);
         } else {
-            throw new Exception("Falta el ID del ingreso a borrar");
+            throw new IngresoException("Falta el ID del ingreso a borrar");
         }
     } elseif ($elegirAcciones == 'Buscar Ingreso') {
         if (isset($_POST['idTicketIngreso'])) {
             $resultado = $gestorIngreso->consultaringreso($_POST['idTicketIngreso']);
         } else {
-            throw new Exception("Falta el ID del ingreso a buscar");
+            throw new IngresoException("Falta el ID del ingreso a buscar");
         }
     }
 
     $resultado = $gestorIngreso->consultaringreso();
+} catch (IngresoException $e) {
+    echo "Error de Ingreso: " . $e->getMessage();
 } catch (Exception $e) {
-    echo "Error: " . $e->getMessage();
+    echo "Error general: " . $e->getMessage();
 }
 
-include_once "../Vista/VistaIngreso.php";
+
+use "../Vista/VistaIngreso.php";
