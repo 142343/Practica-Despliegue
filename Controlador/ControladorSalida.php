@@ -44,5 +44,5 @@ try {
     exit("Ha ocurrido un error. Contacte al administrador.");
 }
 
-include "../Vista/VistaSalida.php";  
+include_once "../Vista/VistaSalida.php";  
 ?>
