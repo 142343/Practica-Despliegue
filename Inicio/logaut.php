@@ -1,30 +1,26 @@
 <?php
-session_start();  //verificar sesion
-session_unset();   //inavilitar sesion
-session_destroy();  //cerrar sesion
-
-
-
-
+session_start();     // Verificar sesión
+session_unset();     // Inhabilitar sesión
+session_destroy();   // Cerrar sesión
 ?>
-<html> 
-<head><script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<!DOCTYPE html> <!-- Declaración agregada -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sesión Cerrada</title> <!-- Etiqueta <title> agregada -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
 <script>
-                swal.fire({
-                    icon: 'info',
-                    title: 'Sesión cerrada correctamente',
-                    text: 'Vuelve pronto!',
-                    showConfirmButton: true,
-                    confirmbuttontext: "cerrar",
-                }).then(function() {
-                    window.location = "../index.html";
-
-                });
-                
-        
-    
-            </script>
+    Swal.fire({
+        icon: 'info',
+        title: 'Sesión cerrada correctamente',
+        text: '¡Vuelve pronto!',
+        showConfirmButton: true,
+        confirmButtonText: "Cerrar", // corregido: estaba mal escrito como "confirmbuttontext"
+    }).then(function () {
+        window.location = "../index.html";
+    });
+</script>
 </body>
 </html>
