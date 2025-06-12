@@ -1,5 +1,5 @@
-<?php 
-include_once "../Modelo/Conexion.php"; // Cambiado a include_once
+<?php
+use "../Modelo/Conexion.php"; // Cambiado a include_once
 $conexion = Conectarse();
 $sql = "SELECT * FROM `producto`;";
 $sqlp = $conexion->query($sql);
@@ -66,82 +66,82 @@ $sqlpe = $conexion->query($sqle);
     <title>Barra de herramientas</title>
     <link rel="stylesheet" href="styles.css">
     
-</head><body>  
-    <div class="sidebar">  
+</head><body>
+    <div class="sidebar">
         <!-- Imagen redonda en la parte superior -->  
-        <div class="profile-image">  
-            <img src="../Img/icono1.jpg" alt="Perfil">  
-        </div>  
-        <a href="../Controlador/ControladorUsuario.php"><i class="fas fa-user"></i> <span class="icon-text"></span></a>  
-        <a href="../Controlador/ControladorProductos.php"><i class="fas fa-boxes"></i> <span class="icon-text"></span></a>  
-        <a href="../Controlador/ControladorIngreso.php"><i class="fas fa-plus-circle"></i> <span class="icon-text"></span></a>  
-        <a href="../Controlador/ControladorSalida.php"><i class="fas fa-minus-circle"></i> <span class="icon-text"></span></a>  
-    </div>  
+        <div class="profile-image">
+            <img src="../Img/icono1.jpg" alt="Perfil">
+        </div>
+        <a href="../Controlador/ControladorUsuario.php"><i class="fas fa-user"></i> <span class="icon-text"></span></a>
+        <a href="../Controlador/ControladorProductos.php"><i class="fas fa-boxes"></i> <span class="icon-text"></span></a>
+        <a href="../Controlador/ControladorIngreso.php"><i class="fas fa-plus-circle"></i> <span class="icon-text"></span></a>
+        <a href="../Controlador/ControladorSalida.php"><i class="fas fa-minus-circle"></i> <span class="icon-text"></span></a>
+    </div>
 </body>
 
 </body>
 </html>
 <style>
 
-.sidebar {  
-    width: 200px; 
-    background-color: #323232; 
-    color: white; 
-    padding-top: 20px;  
-    display: flex;   
-    flex-direction: column; 
-    align-items: center;  
-}  
-
-.profile-image {  
-    width: 40px;  
-    height: 40px; 
-    overflow: hidden;   
-    border-radius: 50%;  
-    margin-bottom: 350px;  
-}  
-
-.profile-image img {  
-    width: 100%;   
-    height: auto; 
-}  
-
-.sidebar a {  
-    color: white; 
-    text-decoration: none; 
-    padding: 10px;
-    width: 100%;  
-    display: flex; 
+.sidebar {
+    width: 200px;
+    background-color: #323232;
+    color: white;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}  
+}
 
-.sidebar a:hover {  
-    background-color: #444;   
+.profile-image {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 350px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar a:hover {
+    background-color: #444; 
 }
 .sidebar a:hover{
     display: flex;
     flex-direction: column;
-    padding: 10px; 
-    background-color: transparent; 
+    padding: 10px;
+    background-color: transparent;
 }
 
 
 
-.sidebar {  
-    width: 60px; 
-    height: 100vh; 
-    background-color: #333; 
-    display: flex;  
-    flex-direction: column;  
-    justify-content: center; 
-    align-items: center; 
-}  
+.sidebar {
+    width: 60px;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 
 .sidebar a i {
-    margin-right: 10px; 
-    font-size: 16px; 
-    color: #fff; 
+    margin-right: 10px;
+    font-size: 16px;
+    color: #fff;
 }
 
 .sidebar a:hover i {
@@ -150,11 +150,11 @@ $sqlpe = $conexion->query($sqle);
 
 
 .navbar {
-    left: 50px; 
-    width: calc(100% - 50px); 
-    height: 100%; 
-    border: 2px solid #000; 
-    border-radius: 0; 
+    left: 50px;
+    width: calc(100% - 50px);
+    height: 100%;
+    border: 2px solid #000;
+    border-radius: 0;
  
 }
 
@@ -162,13 +162,13 @@ $sqlpe = $conexion->query($sqle);
 /* Barra lateral completa hasta arriba */
 .sidebar {
     height: 100%;
-    width: 50px; 
+    width: 50px;
     position: fixed;
     top: 0;
     left: 0;
     background-color: #1C1C1C;
-    z-index: 999; 
-    padding-top: 0px; 
+    z-index: 999;
+    padding-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -185,20 +185,20 @@ $sqlpe = $conexion->query($sqle);
 
 /* Contenido principal */
 .content {
-    margin-left: 60px; 
-    margin-top: 40px; 
+    margin-left: 60px;
+    margin-top: 40px;
 }
-.containeer {  
-    position: relative; 
+.containeer {
+    position: relative;
     left: 50%;
-    transform: translateX(-55%);  
-    width: calc(100% - 100px); 
-    max-width: 1200px; 
-    height: auto; 
-    border: 0px solid #000;   
-    border-radius: 0;   
-    padding: 15px;  
-    box-sizing: border-box; 
+    transform: translateX(-55%);
+    width: calc(100% - 100px);
+    max-width: 1200px;
+    height: auto;
+    border: 0px solid #000; 
+    border-radius: 0;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 </style>
@@ -231,7 +231,7 @@ $sqlpe = $conexion->query($sqle);
   border: 1px solid #000;
   font-size: 14px;
   height: 50px; /* Ajusta la altura según sea necesario */
-"> 
+">
    <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">
       <i class="bi bi-plus-square-dotted"></i> Agregar Entrada
    </button>
@@ -295,17 +295,6 @@ $telefono = $_SESSION['telefono'] ?? '0000000000';
 
       <!-- Panel de Administración -->
       <li class="nav-item dropdown">
-   <a 
-  class="nav-link dropdown-toggle" 
-  href="#" 
-  id="offcanvasNavbarDropdown" 
-  role="button" 
-  data-bs-toggle="dropdown" 
-  aria-expanded="false" 
-  style="font-family: 'Roboto', sans-serif; color: black;" 
-  onkeydown="if (event.key === 'Enter') this.click();"
->Panel de Administrador
-</a>
         <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
           <li><a class="dropdown-item" href="Controlador/ControladorUsuario.php" style="color: black;"><i class="fas fa-users-cog"></i> Gestión de Usuarios</a></li>
           <li><a class="dropdown-item" href="Controlador/ControladorProductos.php" style="color: black;"><i class="fas fa-database"></i> Gestión de Productos</a></li>
