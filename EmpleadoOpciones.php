@@ -109,25 +109,6 @@
 <body class="">
     <div class="wave-container">
         <div class="hero">
-            <!-- <h1 class="texto2" style="color: white;  width: 100%;
-    color: transparent;
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    margin-top: -500;
-
-    background-image: url('https://images.unsplash.com/photo-1604147706283-d7119b5b822c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZvbmRvJTIwYmxhbmNvJTIwbGlzb3xlbnwwfHwwfHx8MA%3D%3D');
-    background-size: cover;
-    background-position-y: 300px;
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    position: relative;
-    /* Necesario para posicionar el texto de forma relativa */
-    animation: moverTexto 4s ease-in-out infinite;
-    display: inline-block;">Bienvenido!</h1> -->
         </div>
     </div>
     <div style="flex-grow: 1; text-align: center; margin-top: -70px;">
@@ -248,10 +229,7 @@
     crossorigin="anonymous"></script>
 
 <!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+
 </body>
 
 <footer
