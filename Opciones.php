@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-$mysqli = new mysqli("localhost", "root", "passwordAlejandro#*", "paty_sport");
+$mysqli = new mysqli("localhost", "AHYDD7576lk", "passwordAlejandro#*", "paty_sport");
 
 if ($mysqli->connect_errno) {
     die("Error al conectar: " . $mysqli->connect_error);
