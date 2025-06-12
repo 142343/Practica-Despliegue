@@ -26,9 +26,7 @@
 /*Fin de encabezado*/
 
 /*Inicio arra de busqueda*/
-.navbar {
-    border-bottom: none;
-}
+
 
 /* Fin Barra de busqueda*/
 
@@ -139,10 +137,7 @@
     /* Espacio entre las tarjetas */
 }
 
-.container5 {
-    padding: 20px;
-    /* Espaciado alrededor del contenedor */
-}
+
 
 .card {
     border: none;
@@ -465,14 +460,6 @@ a:hover {
     /* Color de fondo al pasar el mouse */
 }
 
-.navbar {
-    border-radius: 10px;
-    /* Bordes redondeados de la navbar */
-    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.1);
-    /* Sombra */
-    padding: 15px;
-    /* Espaciado interno */
-}
 
 .d-flex.justify-content-center {
     text-align: center;
@@ -497,9 +484,7 @@ a:hover {
 
 .panel {
     margin-top: 20px;
-    /*.panel-footer{
-          border-top: 1px solid #e7e7e7;
-      }*/
+
 }
 
 .panel .panel-header {
@@ -640,9 +625,6 @@ input[type="checkbox"]:checked::after {
 
 
 
-h2 {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-}
 
 .lead {
     font-style: italic;
