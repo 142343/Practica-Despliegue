@@ -1,5 +1,5 @@
 <?php
-require_once '../Modelo/Producto.php';
+use '../Modelo/Producto.php';
 $gestorProducto = new Producto();
 $gestorTalla = new Talla();
 $gestorMarca = new Marca();
@@ -112,6 +112,5 @@ try {
     echo "Error: " . $e->getMessage();
 }
 
-include_once "../Vista/VistaProducto.php";
-?>
+use "../Vista/VistaProducto.php";
 
