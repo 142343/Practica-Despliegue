@@ -50,9 +50,9 @@ if (isset($_POST['submitContact']) && !empty($correo)) {
 
             // Guardar token en base de datos usando JOIN
             $sqlToken = "
-                UPDATE login 
-                INNER JOIN usuario ON login.Num_Documento = usuario.Num_Documento 
-                SET login.token = ?, login.token_expiry = ? 
+                UPDATE login
+                INNER JOIN usuario ON login.Num_Documento = usuario.Num_Documento
+                SET login.token = ?, login.token_expiry = ?
                 WHERE LOWER(TRIM(usuario.Correo)) = ?
             ";
             $stmt = $mysqli->prepare($sqlToken);
