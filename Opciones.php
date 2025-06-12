@@ -241,7 +241,6 @@ $telefono = $_SESSION['telefono'] ?? '0000000000';
 <br>
 <br><div class="row justify-content-center" style="margin-top: -100px;">
     <div class="col-md-10">
-    
             <div class="card-body text-center">
                 <ul class="list-unstyled d-flex justify-content-center flex-row">
                     <li class="menu-item">
