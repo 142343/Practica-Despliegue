@@ -706,13 +706,13 @@
                                                         <input type="hidden" name="CodigoProducto" value="<?= $fila['CodigoProducto'] ?>">
                                                         <div class="mb-3">
   <label for="nombre" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Nombre</label>
-  <input type="text" id="nombre" name="Nombre" class="form-control" required 
+  <input type="text" id="nombre" name="Nombre" class="form-control" required
          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                                                 
                                                         </div>
                                                         <div class="mb-3">
                                                              <label for="nombre" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Precio</label>
-  <input type="text" id="nombre" name="Nombre" class="form-control" required 
+  <input type="text" id="nombre" name="Nombre" class="form-control" required
          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                                                         </div>
 
@@ -720,12 +720,12 @@
 
                                                         <div class="mb-3">
                                                              <label for="nombre" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Iva</label>
-  <input type="text" id="nombre" name="Nombre" class="form-control" required 
+  <input type="text" id="nombre" name="Nombre" class="form-control" required
          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                                                         </div>
                                                         <div class="mb-3">
                                                              <label for="nombre" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Categoría</label>
-  <input type="text" id="nombre" name="Nombre" class="form-control" required 
+  <input type="text" id="nombre" name="Nombre" class="form-control" required
          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
 
                                                                 <?php foreach ($categorias as $categoria): ?>
@@ -740,7 +740,7 @@
 
                                                         <div class="mb-3">
                                                               <label for="nombre" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Estado</label>
-  <input type="text" id="nombre" name="Nombre" class="form-control" required 
+  <input type="text" id="nombre" name="Nombre" class="form-control" required
          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
 
                                                                 <?php foreach ($estados as $estado): ?>
