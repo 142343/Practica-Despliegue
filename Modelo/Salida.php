@@ -1,5 +1,5 @@
 <?php
-include '../Modelo/Conexion.php';
+include_once '../Modelo/Conexion.php';
 
 class Salida
 {
