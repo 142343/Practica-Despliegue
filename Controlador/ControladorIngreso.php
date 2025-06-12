@@ -83,5 +83,5 @@ try {
     echo "Error: " . $e->getMessage();  
 }  
 
-include "../Vista/VistaIngreso.php";  
+include_once "../Vista/VistaIngreso.php";  
 ?>
