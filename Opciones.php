@@ -133,25 +133,6 @@ $mysqli->close();
 </head><body class="">
     <div class="wave-container">
         <div class="hero">
-           <!-- <h1 class="texto2" style="color: white;  width: 100%;
-    color: transparent;
-    text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    margin-top: -500;
-
-    background-image: url('https://images.unsplash.com/photo-1604147706283-d7119b5b822c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGZvbmRvJTIwYmxhbmNvJTIwbGlzb3xlbnwwfHwwfHx8MA%3D%3D');
-    background-size: cover;
-    background-position-y: 300px;
-
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    position: relative;
-    /* Necesario para posicionar el texto de forma relativa */
-    animation: moverTexto 4s ease-in-out infinite;
-    display: inline-block;">Bienvenido!</h1> -->
         </div>
     </div>
     <div style="flex-grow: 1; text-align: center; margin-top: -70px;">
@@ -212,18 +193,6 @@ $telefono = $_SESSION['telefono'] ?? '0000000000';
 
       <!-- Panel de Administración -->
       <li class="nav-item dropdown">
-          <a 
-  class="nav-link dropdown-toggle" 
-  href="#" 
-  id="offcanvasNavbarDropdown" 
-  role="button" 
-  data-bs-toggle="dropdown" 
-  aria-expanded="false" 
-  style="font-family: 'Roboto', sans-serif; color: black;" 
-  onkeydown="if (event.key === 'Enter') this.click();"
->
-  Menú
-</a>
         <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
           <li><a class="dropdown-item" href="Controlador/ControladorUsuario.php" style="color: black;"><i class="fas fa-users-cog"></i> Gestión de Usuarios</a></li>
           <li><a class="dropdown-item" href="Controlador/ControladorProductos.php" style="color: black;"><i class="fas fa-database"></i> Gestión de Productos</a></li>
