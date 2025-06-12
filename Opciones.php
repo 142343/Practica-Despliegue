@@ -218,7 +218,7 @@ $telefono = $_SESSION['telefono'] ?? '0000000000';
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="Controlador/ControladorProductos.php" class="btn btn-primary menu-button" 
+                        <a href="Controlador/ControladorProductos.php" class="btn btn-primary menu-button"
                            style="border-radius: 25px; padding: 15px; background-color: #5bc0de; border: none; transition: background-color 0.3s, transform 0.3s; color: #000000; margin-right: 5px;">
                             <i class="fas fa-box" style="margin-right: 10px; color: #000000;"></i> Productos
                         </a>
@@ -239,7 +239,7 @@ $telefono = $_SESSION['telefono'] ?? '0000000000';
             </div>
             <hr style="border: none; height: 5px; background: linear-gradient(to right, transparent, black, transparent); width: 50%; margin: 20px auto 10px; box-shadow: 0 0 10px black;" />
             </center>
-    </div>             
+    </div>
 </div>
 
 
