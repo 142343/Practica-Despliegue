@@ -212,9 +212,18 @@ $telefono = $_SESSION['telefono'] ?? '0000000000';
 
       <!-- Panel de Administración -->
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-family: 'Roboto', sans-serif; color: black;">
-          <i class="fas fa-cog"></i> Panel de Administración
-        </a>
+          <a 
+  class="nav-link dropdown-toggle" 
+  href="#" 
+  id="offcanvasNavbarDropdown" 
+  role="button" 
+  data-bs-toggle="dropdown" 
+  aria-expanded="false" 
+  style="font-family: 'Roboto', sans-serif; color: black;" 
+  onkeydown="if (event.key === 'Enter') this.click();"
+>
+  Menú
+</a>
         <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
           <li><a class="dropdown-item" href="Controlador/ControladorUsuario.php" style="color: black;"><i class="fas fa-users-cog"></i> Gestión de Usuarios</a></li>
           <li><a class="dropdown-item" href="Controlador/ControladorProductos.php" style="color: black;"><i class="fas fa-database"></i> Gestión de Productos</a></li>
