@@ -1,42 +1,40 @@
 <?php  
 require_once '../Modelo/Salida.php';  
 
-$gestorSalida = new Salida(); 
-
+$gestorSalida = new Salida();
 $producto = $gestorSalida->ConsultarProducto();
 
 $elegirAcciones = filter_input(INPUT_POST, 'Acciones', FILTER_SANITIZE_STRING);
 
 try {
     if ($elegirAcciones === 'Agregar Salida') {
-        // Validar y sanitizar entradas
+        // Validar y sanitizar entradas del formulario
         $fechaSalida = filter_input(INPUT_POST, 'FechaSalida', FILTER_SANITIZE_STRING);
         $cantidad = filter_input(INPUT_POST, 'Cantidad', FILTER_VALIDATE_INT);
         $productoCodigo = filter_input(INPUT_POST, 'ProductoCodigo', FILTER_SANITIZE_STRING);
         $documentoEmpleado = filter_input(INPUT_POST, 'Num_Documento_Empleado', FILTER_SANITIZE_STRING);
 
-        // Validación básica
+        // Validar que todos los campos sean válidos
         if (!$fechaSalida || $cantidad === false || !$productoCodigo || !$documentoEmpleado) {
-            throw new Exception("Datos inválidos enviados.");
+            throw new Exception("Datos del formulario inválidos.");
         }
 
-        // Registrar salida
+        // Ejecutar la función para registrar la salida
         $gestorSalida->agregarSalida($fechaSalida, $cantidad, $productoCodigo, $documentoEmpleado);
 
+        // Redirigir después del registro exitoso
         header("Location: ../Controlador/ControladorSalida.php");
         exit();
-
     } elseif ($elegirAcciones === 'Buscar Producto') {
         $codigoProducto = filter_input(INPUT_POST, 'CodigoProducto', FILTER_SANITIZE_STRING);
         $resultado = $gestorSalida->consultarSalida($codigoProducto);
     } else {
         $resultado = $gestorSalida->consultarSalida(); 
     }
-
 } catch (Exception $e) {
-    // En desarrollo puedes hacer esto, en producción guarda el error en un log privado
-    error_log("Error en ControladorSalida: " . $e->getMessage());
-    exit("Ha ocurrido un error, contacte al administrador.");
+    // Registrar error en el log del servidor, sin mostrar datos al usuario
+    error_log("Error en ControladorSalida.php: " . $e->getMessage());
+    exit("Ha ocurrido un error. Por favor, contacte al administrador.");
 }
 
 
