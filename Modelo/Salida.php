@@ -1,5 +1,5 @@
 <?php
-include_once '../Modelo/Conexion.php';
+use '../Modelo/Conexion.php';
 
 class Salida
 {
@@ -13,7 +13,7 @@ class Salida
     private $Conexion;
 
     public function __construct($IdTicketSalida = null, $FechaSalida = null, $PrecioTotal = null, $ProductoCodigoProducto = null, $Cantidad = null, $ValorUnitario = null, $Empleado = null)
-    { 
+    {
         $this->IdTicketSalida = $IdTicketSalida;
         $this->FechaSalida = $FechaSalida;
         $this->PrecioTotal = $PrecioTotal;
@@ -48,8 +48,8 @@ class Salida
             throw new Exception("No hay suficiente stock para realizar la salida.");
         }
 
-        $PrecioSinIVA = $PrecioUnitario * $Cantidad; 
-        $PrecioTotal = $PrecioSinIVA + ($PrecioSinIVA * ($IVA / 100)); 
+        $PrecioSinIVA = $PrecioUnitario * $Cantidad;
+        $PrecioTotal = $PrecioSinIVA + ($PrecioSinIVA * ($IVA / 100));
 
        
         $sqlTicket = "INSERT INTO ticket_salida (FechaSalida, PrecioTotal) VALUES (?, ?)";
@@ -96,7 +96,7 @@ class Salida
     } catch (Exception $e) {
         $this->Conexion->rollback();
         error_log("Error en agregarSalida: " . $e->getMessage());
-        throw new Exception($e->getMessage()); 
+        throw new Exception($e->getMessage());
     }
 }
 
@@ -105,31 +105,31 @@ class Salida
 
     public function consultarSalida($IdTicketSalida = null)
     {
-        if ($IdTicketSalida === null) { 
-            $sql = "SELECT 
-                        TS.IdTicketSalida, 
-                        TS.FechaSalida, 
-                        TS.PrecioTotal, 
-                        GROUP_CONCAT(DISTINCT P.Nombre SEPARATOR '<br>') AS Productos, 
-                        GROUP_CONCAT(DS.Cantidad SEPARATOR '<br>') AS Cantidades, 
-                        GROUP_CONCAT(DS.ValorUnitario SEPARATOR '<br>') AS ValoresUnitarios, 
+        if ($IdTicketSalida === null) {
+            $sql = "SELECT
+                        TS.IdTicketSalida,
+                        TS.FechaSalida,
+                        TS.PrecioTotal,
+                        GROUP_CONCAT(DISTINCT P.Nombre SEPARATOR '<br>') AS Productos,
+                        GROUP_CONCAT(DS.Cantidad SEPARATOR '<br>') AS Cantidades,
+                        GROUP_CONCAT(DS.ValorUnitario SEPARATOR '<br>') AS ValoresUnitarios,
                         GROUP_CONCAT(U.Nombres SEPARATOR '<br>') AS Empleados
-                    FROM 
+                    FROM
                         ticket_salida AS TS
-                    INNER JOIN 
+                    INNER JOIN
                         detalle_salida AS DS ON TS.IdTicketSalida = DS.SalidaIdTicketSalida
-                    INNER JOIN 
+                    INNER JOIN
                         producto AS P ON DS.ProductoCodigoProducto = P.CodigoProducto
-                    INNER JOIN 
+                    INNER JOIN
                         usuario AS U ON DS.Empleado = U.Num_Documento
-                    GROUP BY 
+                    GROUP BY
                         TS.IdTicketSalida, TS.FechaSalida, TS.PrecioTotal";
     
             $resultado = $this->Conexion->query($sql);
         } else {
             $sql = "SELECT * FROM ticket_salida WHERE IdTicketSalida = ?";
             $stmt = $this->Conexion->prepare($sql);
-            $stmt->bind_param("i", $IdTicketSalida); 
+            $stmt->bind_param("i", $IdTicketSalida);
             $stmt->execute();
             $resultado = $stmt->get_result();
             $stmt->close();
@@ -156,4 +156,3 @@ class Salida
         }
     }
 }
-?>
