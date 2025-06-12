@@ -20,11 +20,11 @@ class ProductoTest extends TestCase
         $iva = 19;
         $imagen = 'imagen.jpg';
         $id_categoria = 121;
-        $id_estado = 101;   
+        $id_estado = 101;
         $descripcion = 'Descripción del producto';
-        $id_marca = 30;   
-        $id_talla = 201;   
-        $documento_usuario = '505547805'; 
+        $id_marca = 30;
+        $id_talla = 201;
+        $documento_usuario = '505547805';
         
       
         try {
@@ -63,7 +63,7 @@ class ProductoTest extends TestCase
         );
 
         // Obtener el último producto insertado (suponiendo que consultarProducto sin parámetro devuelve todos)
-        $todos = $this->producto->consultarProducto(); // Asumiendo devuelve mysqli_result
+        $todos = $this->producto->consultarProducto();// Asumiendo devuelve mysqli_result
         $ultimoProducto = null;
         while ($fila = $todos->fetch_assoc()) {
             $ultimoProducto = $fila;
@@ -84,16 +84,16 @@ class ProductoTest extends TestCase
     
     public function testActualizarProducto()
     {
-        $id_producto = 356; // Asume que el producto con ID 1 existe
+        $id_producto = 356;
         $nombre = 'Producto actualizado Lilley';
         $precio = 299.99;
         $iva = 19;
-        $id_categoria = 121; 
-        $id_estado = 101; 
+        $id_categoria = 121;
+        $id_estado = 101;
         $descripcion = 'Producto actualizado';
-        $id_marca = 30;    
-        $id_talla = 201;   
-        $documento_usuario = '1080180837'; 
+        $id_marca = 30;
+        $id_talla = 201;
+        $documento_usuario = '1080180837';
         
         $resultado = $this->producto->actualizarProducto(
             $id_producto,
@@ -115,7 +115,7 @@ class ProductoTest extends TestCase
     public function testConsultarTodosLosProductos()
     {
         // Reemplazamos listarProductos con consultarProducto sin parámetros
-        $resultado = $this->producto->consultarProducto(); // Sin parámetro consulta todos
+        $resultado = $this->producto->consultarProducto();
         
         // Verificamos que devuelve un objeto mysqli_result
         $this->assertInstanceOf(\mysqli_result::class, $resultado);
