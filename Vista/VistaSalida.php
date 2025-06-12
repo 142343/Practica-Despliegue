@@ -684,7 +684,6 @@ thead th {
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Producto</label>
                         <select name="ProductoCodigo" id="ProductoCodigo" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" required>
                             <option value="">Seleccione Producto...</option>
                             <?php while($row=mysqli_fetch_assoc($sqlp)){?>
@@ -696,7 +695,6 @@ thead th {
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <label for="Cantidad" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Cantidad</label>
                         <input class="form-control border-primary rounded-3 shadow-sm" id="Cantidad" name="Cantidad" type="number" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" min="1" max="99999999999" oninput="validarLongitud(this)" inputmode="numeric">
                         <script>
                             function validarLongitud(input) {
@@ -710,7 +708,6 @@ thead th {
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Empleado</label>
                         <select name="Num_Documento_Empleado" id="Num_Documento_Empleado" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" required>
                             <option value="">Seleccione Empleado...</option>
                             <?php while($row=mysqli_fetch_assoc($sqlpe)){?>
