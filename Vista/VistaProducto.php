@@ -195,7 +195,7 @@
 
 <!-- Fin de encabezado-->
 <br>
-<center>
+
     <div class="breadcrumbs shadow-1">
         <div class="container-o">
             <div class="row" style="background-color: #FFFFFFFF;">
