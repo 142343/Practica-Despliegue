@@ -65,5 +65,5 @@ try {
     echo "Error: " . $e->getMessage();  
 }  
 
-include "../Vista/VistaUsuario.php";  
+include_once "../Vista/VistaUsuario.php";  
 ?>
