@@ -705,30 +705,28 @@
                                                     <form action="../Controlador/ControladorProductos.php" method="post">
                                                         <input type="hidden" name="CodigoProducto" value="<?= $fila['CodigoProducto'] ?>">
                                                         <div class="mb-3">
-                                                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Nombre</label>
-                                                            <input type="text" class="form-control"
-                                                                required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" name="Nombre"
-                                                                value="<?= $fila['Nombre'] ?>" required>
+  <label for="nombre" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Nombre</label>
+  <input type="text" id="nombre" name="Nombre" class="form-control" required 
+         style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+                                                
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Precio</label>
-                                                            <input type="number" class="form-control"
-                                                                required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" name="Precio"
-                                                                value="<?= $fila['Precio'] ?>" required>
+                                                             <label for="nombre" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Precio</label>
+  <input type="text" id="nombre" name="Nombre" class="form-control" required 
+         style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                                                         </div>
 
 
 
                                                         <div class="mb-3">
-                                                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">IVA</label>
-                                                            <input type="number" class="form-control"
-                                                                required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" name="IVA"
-                                                                value="<?= $fila['IVA'] ?>" required>
+                                                             <label for="nombre" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Iva</label>
+  <input type="text" id="nombre" name="Nombre" class="form-control" required 
+         style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Categoria</label>
-                                                            <select name="CategoriaCodigoCategoría" id="CategoriaCodigoCategoría" class="form-control"
-                                                                required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+                                                             <label for="nombre" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Categoría</label>
+  <input type="text" id="nombre" name="Nombre" class="form-control" required 
+         style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
 
                                                                 <?php foreach ($categorias as $categoria): ?>
                                                                     <option value="<?= $categoria['CodigoCategoría']; ?>" <?= ($categoria['Nombre'] == $fila['categoria'] ? 'selected' : '') ?>>
@@ -741,9 +739,9 @@
 
 
                                                         <div class="mb-3">
-                                                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Estado</label>
-                                                            <select name="EstadoCodigoEstado" id="EstadoCodigoEstado" class="form-control"
-                                                                required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+                                                              <label for="nombre" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Estado</label>
+  <input type="text" id="nombre" name="Nombre" class="form-control" required 
+         style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
 
                                                                 <?php foreach ($estados as $estado): ?>
                                                                     <option value="<?= $estado['CodigoEstado']; ?>" <?= ($estado['tipoEstado'] == $fila['estado'] ? 'selected' : '') ?>>
