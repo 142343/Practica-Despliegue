@@ -1,8 +1,8 @@
 <?php
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../Modelo/Producto.php';
-include_once __DIR__ . '/../Modelo/Conexion.php';
+use __DIR__ . '/../Modelo/Producto.php';
+use __DIR__ . '/../Modelo/Conexion.php';
 
 class ProductoTest extends TestCase
 {
