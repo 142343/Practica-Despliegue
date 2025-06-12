@@ -144,7 +144,7 @@ try {
 
 
 
-include "../Vista/VistaProducto.php";  
+include_once "../Vista/VistaProducto.php";  
 
 
 
