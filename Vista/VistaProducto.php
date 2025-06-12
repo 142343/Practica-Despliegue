@@ -1000,19 +1000,18 @@
                             <input class="form-control border-primary rounded-3 shadow-sm" id="Nombre" name="Nombre" type="text"
                                 required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                         </div>
+                        
+<div class="mb-3 d-flex align-items-center">
+  <label for="GeneroidGenero" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Género</label>
+  <select name="GeneroidGenero" id="GeneroidGenero" class="form-control border-primary rounded-3 shadow-sm"
+          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    <option value="">Seleccione el Género...</option>
+    <?php foreach ($genero as $g): ?>
+      <option value="<?= $g['idGenero']; ?>"><?= $g['Nombre']; ?></option>
+    <?php endforeach; ?>
+  </select>
+</div>
 
-                        <div class="mb-3 d-flex align-items-center">
-                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Genero</label>
-                            <select name="GeneroidGenero" id="GeneroidGenero" class="form-control border-primary rounded-3 shadow-sm"
-                                style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-                                <option value="">Seleccione el Genero...</option>
-                                <?php foreach ($genero as $genero): ?>
-                                    <option value="<?= $genero['idGenero']; ?>">
-                                        <?= $genero['Nombre']; ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
 
 
 
