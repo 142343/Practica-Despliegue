@@ -1,5 +1,5 @@
 <?php
-include_once '../Modelo/Conexion.php';
+use '../Modelo/Conexion.php';
 
 
 class  Categoria
@@ -18,10 +18,10 @@ class  Categoria
     }
 
     public function agregarCategoria($Nombre, $GeneroidGenero)
-    {        
+    {
         $this->Conexion = Conectarse();
     
-        $sql = "INSERT INTO categoria (Nombre, GeneroidGenero) VALUES (?, ?)";  
+        $sql = "INSERT INTO categoria (Nombre, GeneroidGenero) VALUES (?, ?)";
         $stmt = $this->Conexion->prepare($sql);
         $stmt->bind_param("si", $Nombre, $GeneroidGenero);
         $stmt->execute();
@@ -54,10 +54,10 @@ class  Marca
     }
 
     public function agregarMarca($Nombre)
-    {        
+    {
         $this->Conexion = Conectarse();
     
-        $sql = "INSERT INTO marcas (Nombre) VALUES (?)";  
+        $sql = "INSERT INTO marcas (Nombre) VALUES (?)";
         $stmt = $this->Conexion->prepare($sql);
         $stmt->bind_param("s", $Nombre);
         $stmt->execute();
@@ -84,10 +84,10 @@ class Talla
     }
 
     public function agregarTalla($Tallas)
-    {        
+    {
         $this->Conexion = Conectarse();
     
-        $sql = "INSERT INTO tallas (Tallas) VALUES (?)";  
+        $sql = "INSERT INTO tallas (Tallas) VALUES (?)";
         $stmt = $this->Conexion->prepare($sql);
         $stmt->bind_param("s", $Tallas);
         $stmt->execute();
@@ -108,7 +108,7 @@ class Producto
     private $TallasCodigoTallas;
     private $Proveedor;
     private $Num_Documento;
-    private $Imagen; 
+    private $Imagen;
     private $Conexion;
 
     public function __construct($CodigoProducto = null, $Nombre = null, $Precio = null, $Stock = null, $IVA = null, $CategoriaCodigoCategorías = null, $EstadoCodigoEstado = null, $Descripcion = null, $MarcasCodigoMarca = null, $TallasCodigoTallas = null, $Proveedor = null, $Num_Documento = 'ACTIVO', $Imagen = null) // Agregado parámetro de imagen
@@ -125,7 +125,7 @@ class Producto
         $this->TallasCodigoTallas = $TallasCodigoTallas;
         $this->Proveedor = $Proveedor;
         $this->Num_Documento = $Num_Documento;
-        $this->Imagen = $Imagen; 
+        $this->Imagen = $Imagen;
         $this->Conexion = Conectarse();
     }
 
@@ -144,36 +144,36 @@ class Producto
 
 
     public function consultarProducto($CodigoProducto = null) {
-        if ($CodigoProducto === null) { 
-            $sql = "SELECT 
-                        `CodigoProducto`, 
-                        `Nombre`, 
-                        `Precio`, 
-                        `Stock`, 
-                        `IVA`, 
-                        `Descripcion`, 
+        if ($CodigoProducto === null) {
+            $sql = "SELECT
+                        `CodigoProducto`,
+                        `Nombre`,
+                        `Precio`,
+                        `Stock`,
+                        `IVA`,
+                        `Descripcion`,
                         `Num_Documento`,
                         (SELECT Tallas FROM tallas WHERE producto.TallasCodigoTallas = CodigoTallas) AS tallas,
-                        (SELECT Nombre FROM categoria WHERE producto.CategoriaCodigoCategoría = CodigoCategoría) AS categoria, 
-                        (SELECT tipoEstado FROM estado WHERE producto.EstadoCodigoEstado = CodigoEstado) AS estado, 
+                        (SELECT Nombre FROM categoria WHERE producto.CategoriaCodigoCategoría = CodigoCategoría) AS categoria,
+                        (SELECT tipoEstado FROM estado WHERE producto.EstadoCodigoEstado = CodigoEstado) AS estado,
                         (SELECT Nombre FROM marcas WHERE producto.MarcasCodigoMarca = CodigoMarca) AS marcas,
-                        (SELECT Nombres FROM usuario WHERE producto.Num_Documento = Num_Documento) AS Nombres  
+                        (SELECT Nombres FROM usuario WHERE producto.Num_Documento = Num_Documento) AS Nombres
                     FROM `producto`;";
             $resultado = $this->Conexion->query($sql);
         } else {
-            $sql = "SELECT 
-                        `CodigoProducto`, 
-                        `Nombre`, 
-                        `Precio`, 
-                        `Stock`, 
-                        `IVA`, 
-                        `Descripcion`, 
+            $sql = "SELECT
+                        `CodigoProducto`,
+                        `Nombre`,
+                        `Precio`,
+                        `Stock`,
+                        `IVA`,
+                        `Descripcion`,
                         `Num_Documento`,
                         (SELECT Tallas FROM tallas WHERE producto.TallasCodigoTallas = CodigoTallas) AS tallas,
-                        (SELECT Nombre FROM categoria WHERE producto.CategoriaCodigoCategoría = CodigoCategoría) AS categoria, 
-                        (SELECT tipoEstado FROM estado WHERE producto.EstadoCodigoEstado = CodigoEstado) AS estado, 
+                        (SELECT Nombre FROM categoria WHERE producto.CategoriaCodigoCategoría = CodigoCategoría) AS categoria,
+                        (SELECT tipoEstado FROM estado WHERE producto.EstadoCodigoEstado = CodigoEstado) AS estado,
                         (SELECT Nombre FROM marcas WHERE producto.MarcasCodigoMarca = CodigoMarca) AS marcas,
-                        (SELECT Nombres FROM usuario WHERE producto.Num_Documento = Num_Documento) AS Nombres  
+                        (SELECT Nombres FROM usuario WHERE producto.Num_Documento = Num_Documento) AS Nombres
                     FROM `producto` WHERE CodigoProducto = ?";
 
             $stmt = $this->Conexion->prepare($sql);
@@ -208,7 +208,7 @@ class Producto
 
     public function ConsultarCategoria()
     {
-        $sql = "SELECT CodigoCategoría, Nombre FROM categoria"; 
+        $sql = "SELECT CodigoCategoría, Nombre FROM categoria";
         $resultado = $this->Conexion->query($sql);
         return $resultado;
     }
@@ -264,5 +264,3 @@ class Producto
 
 }
 
-
-?>
