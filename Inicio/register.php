@@ -103,4 +103,4 @@ if (mysqli_stmt_execute($stmtUsuario)) {
 
 mysqli_stmt_close($stmtUsuario);
 mysqli_close($mysqli);
-?>
+
