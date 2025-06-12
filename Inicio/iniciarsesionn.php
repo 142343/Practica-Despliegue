@@ -4,7 +4,6 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$mysqli = new mysqli("localhost", "root", "DB_PASSWORD", "paty_sport");
 if ($mysqli->connect_errno) {
     die("Error al conectar: " . $mysqli->connect_error);
 }
