@@ -2,8 +2,8 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../Modelo/Usuario.php';
-include_once __DIR__ . '/../Modelo/Conexion.php'; // Asegúrate de que la ruta sea correcta
+use __DIR__ . '/../Modelo/Usuario.php';
+use __DIR__ . '/../Modelo/Conexion.php'; // Asegúrate de que la ruta sea correcta
 
 class UsuariosTest extends TestCase
 {
