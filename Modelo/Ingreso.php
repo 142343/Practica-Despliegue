@@ -1,5 +1,5 @@
 <?php
-include_once '../Modelo/Conexion.php';
+use '../Modelo/Conexion.php';
 
 class Ingreso
 {
@@ -104,24 +104,24 @@ class Ingreso
     public function consultaringreso($idTicketIngreso = null)
     {
         if ($idTicketIngreso === null) {
-            $sql = "SELECT 
-                        TS.idTicketIngreso, 
-                        TS.FechaIngresoProducto, 
-                        TS.PrecioTotal, 
-                        GROUP_CONCAT(DISTINCT P.Nombre SEPARATOR '<br>') AS ProductoCodigoProducto, 
+            $sql = "SELECT
+                        TS.idTicketIngreso,
+                        TS.FechaIngresoProducto,
+                        TS.PrecioTotal,
+                        GROUP_CONCAT(DISTINCT P.Nombre SEPARATOR '<br>') AS ProductoCodigoProducto,
                         GROUP_CONCAT(DS.Cantidad SEPARATOR '<br>') AS Cantidad,
                         GROUP_CONCAT(DS.Descripción SEPARATOR '<br>') AS Descripción,
-                        GROUP_CONCAT(DS.PrecioIngreso SEPARATOR '<br>') AS PrecioIngreso, 
+                        GROUP_CONCAT(DS.PrecioIngreso SEPARATOR '<br>') AS PrecioIngreso,
                         GROUP_CONCAT(U.Nombres SEPARATOR '<br>') AS Empleado
-                    FROM 
+                    FROM
                         ticket_ingreso AS TS
-                    INNER JOIN 
+                    INNER JOIN
                         detalle_ingreso AS DS ON TS.idTicketIngreso = DS.TicketSalidaidTicketIngreso
-                    INNER JOIN 
+                    INNER JOIN
                         producto AS P ON DS.ProductoCodigoProducto = P.CodigoProducto
-                    INNER JOIN 
+                    INNER JOIN
                         usuario AS U ON DS.Empleado = U.Num_Documento
-                    GROUP BY 
+                    GROUP BY
                         TS.idTicketIngreso, TS.FechaIngresoProducto, TS.PrecioTotal";
 
             $resultado = $this->Conexion->query($sql);
@@ -136,4 +136,3 @@ class Ingreso
         return $resultado;
     }
 }
-?>
