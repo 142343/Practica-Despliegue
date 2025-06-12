@@ -5,9 +5,9 @@ ini_set('display_errors', 1);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once '../PHPMailer/src/Exception.php';
-require_once '../PHPMailer/src/PHPMailer.php';
-require_once '../PHPMailer/src/SMTP.php';
+use '../PHPMailer/src/Exception.php';
+use '../PHPMailer/src/PHPMailer.php';
+use '../PHPMailer/src/SMTP.php';
 
 // Conexión segura a la base de datos con usuario protegido (NO usar root)
 
