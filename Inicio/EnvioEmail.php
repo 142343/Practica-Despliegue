@@ -37,7 +37,7 @@ if (isset($_POST['submitContact']) && !empty($correo)) {
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
             $mail->Username   = 'patysport90@gmail.com';
-            $mail->Password   = 'qfbdwvrhradkvjby'; // Contraseña de aplicación de Gmail
+           
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port       = 587;
 
