@@ -768,29 +768,29 @@
                                                                 <?php endforeach; ?>
                                                             </select>
                                                         </div>
-                                                        <div class="mb-3">
-                                                            <label>Talla</label>
-                                                            <select name="TallasCodigoTallas" id="TallasCodigoTallas" class="form-control"
-                                                                required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-                                                                <?php foreach ($tallas as $talla): ?>
-                                                                    <option value="<?= $talla['CodigoTallas']; ?>" <?= ($talla['Tallas'] == $fila['tallas'] ? 'selected' : '') ?>>
-                                                                        <?= $talla['Tallas']; ?>
-                                                                    </option>
-                                                                <?php endforeach; ?>
-                                                            </select>
-                                                        </div>
-                                                        <div class="mb-3">
-                                                            <label>Proveedor</label>
-                                                            <select name="Num_Documento" id="Num_Documento" class="form-control"
-                                                                required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+                                                      <div class="mb-3">
+  <label for="TallasCodigoTallas" class="form-label" style="color: #ffffff; font-size: 0.9rem;">Talla</label>
+  <select name="TallasCodigoTallas" id="TallasCodigoTallas" class="form-control"
+          required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    <?php foreach ($tallas as $talla): ?>
+      <option value="<?= $talla['CodigoTallas']; ?>" <?= ($talla['Tallas'] == $fila['tallas'] ? 'selected' : '') ?>>
+        <?= $talla['Tallas']; ?>
+      </option>
+    <?php endforeach; ?>
+  </select>
+</div>
+<div class="mb-3">
+  <label for="Num_Documento" class="form-label" style="color: #ffffff; font-size: 0.9rem;">Proveedor</label>
+  <select name="Num_Documento" id="Num_Documento" class="form-control"
+          required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    <?php foreach ($usuarios as $usuario): ?>
+      <option value="<?= $usuario['Num_Documento']; ?>" <?= ($usuario['Nombres'] == $fila['Nombres'] ? 'selected' : '') ?>>
+        <?= $usuario['Nombres']; ?>
+      </option>
+    <?php endforeach; ?>
+  </select>
+</div>
 
-                                                                <?php foreach ($usuarios as $usuario): ?>
-                                                                    <option value="<?= $usuario['Num_Documento']; ?>" <?= ($usuario['Nombres'] == $fila['Nombres'] ? 'selected' : '') ?>>
-                                                                        <?= $usuario['Nombres']; ?>
-                                                                    </option>
-                                                                <?php endforeach; ?>
-                                                            </select>
-                                                        </div>
 
                                                         <button type="submit" class="btn btn-primary" name="Acciones"
                                                             value="ActualizarProducto" style="background-color: #64ABEC; border-color: #64ABEC; padding: 0.6rem; font-size: 0.9rem;">Actualizar</button>
@@ -878,28 +878,31 @@
                         <br>
 
                         <!-- Categoria -->
-                        <div class="mb-3 d-flex align-items-center">
-                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Categoria</label>
-                            <select name="CategoriaCodigoCategoría" id="CategoriaCodigoCategoría" class="form-control border-primary rounded-3 shadow-sm"
-                                style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-                                <option value="">Seleccione Categoria...</option>
-                                <?php foreach ($categorias as $categoria): ?>
-                                    <option value="<?= $categoria['CodigoCategoría']; ?>"><?= $categoria['Nombre']; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
+                       <!-- Categoria -->
+<div class="mb-3 d-flex align-items-center">
+  <label for="CategoriaCodigoCategoría" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Categoria</label>
+  <select name="CategoriaCodigoCategoría" id="CategoriaCodigoCategoría" class="form-control border-primary rounded-3 shadow-sm"
+          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    <option value="">Seleccione Categoria...</option>
+    <?php foreach ($categorias as $categoria): ?>
+      <option value="<?= $categoria['CodigoCategoría']; ?>"><?= $categoria['Nombre']; ?></option>
+    <?php endforeach; ?>
+  </select>
+</div>
 
                         <!-- Estado -->
-                        <div class="mb-3 d-flex align-items-center">
-                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Estado</label>
-                            <select name="EstadoCodigoEstado" id="EstadoCodigoEstado" class="form-control border-primary rounded-3 shadow-sm"
-                                style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-                                <option value="">Seleccione Estado...</option>
-                                <?php foreach ($estados as $estado): ?>
-                                    <option value="<?= $estado['CodigoEstado']; ?>"><?= $estado['tipoEstado']; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
+                       <!-- Estado -->
+<div class="mb-3 d-flex align-items-center">
+  <label for="EstadoCodigoEstado" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Estado</label>
+  <select name="EstadoCodigoEstado" id="EstadoCodigoEstado" class="form-control border-primary rounded-3 shadow-sm"
+          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    <option value="">Seleccione Estado...</option>
+    <?php foreach ($estados as $estado): ?>
+      <option value="<?= $estado['CodigoEstado']; ?>"><?= $estado['tipoEstado']; ?></option>
+    <?php endforeach; ?>
+  </select>
+</div>
+
 
                         <!-- Descripcion -->
                         <div class="mb-3 d-flex align-items-center">
@@ -908,41 +911,42 @@
                                 style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;"></textarea>
                         </div>
 
-                        <!-- Marcas -->
-                        <div class="mb-3 d-flex align-items-center">
-                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Marcas</label>
-                            <select name="MarcasCodigoMarca" id="MarcasCodigoMarca" class="form-control border-primary rounded-3 shadow-sm"
-                                style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-                                <option value="">Seleccione Marca...</option>
-                                <?php foreach ($marcas as $marca): ?>
-                                    <option value="<?= $marca['CodigoMarca']; ?>"><?= $marca['Nombre']; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
+                <!-- Marcas -->
+<div class="mb-3 d-flex align-items-center">
+  <label for="MarcasCodigoMarca" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Marcas</label>
+  <select name="MarcasCodigoMarca" id="MarcasCodigoMarca" class="form-control border-primary rounded-3 shadow-sm"
+          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    <option value="">Seleccione Marca...</option>
+    <?php foreach ($marcas as $marca): ?>
+      <option value="<?= $marca['CodigoMarca']; ?>"><?= $marca['Nombre']; ?></option>
+    <?php endforeach; ?>
+  </select>
+</div>
 
-                        <!-- Tallas -->
-                        <div class="mb-3 d-flex align-items-center">
-                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Tallas</label>
-                            <select name="TallasCodigoTallas" id="TallasCodigoTallas" class="form-control border-primary rounded-3 shadow-sm"
-                                style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-                                <option value="">Seleccione Tallas...</option>
-                                <?php foreach ($tallas as $talla): ?>
-                                    <option value="<?= $talla['CodigoTallas']; ?>"><?= $talla['Tallas']; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
+<!-- Tallas -->
+<div class="mb-3 d-flex align-items-center">
+  <label for="TallasCodigoTallas" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Tallas</label>
+  <select name="TallasCodigoTallas" id="TallasCodigoTallas" class="form-control border-primary rounded-3 shadow-sm"
+          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    <option value="">Seleccione Tallas...</option>
+    <?php foreach ($tallas as $talla): ?>
+      <option value="<?= $talla['CodigoTallas']; ?>"><?= $talla['Tallas']; ?></option>
+    <?php endforeach; ?>
+  </select>
+</div>
 
-                        <!-- Proveedor -->
-                        <div class="mb-3 d-flex align-items-center">
-                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Proveedor</label>
-                            <select name="Num_Documento" id="Num_Documento" class="form-control border-primary rounded-3 shadow-sm"
-                                style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-                                <option value="">Seleccione Proveedor...</option>
-                                <?php foreach ($usuarios as $usuario): ?>
-                                    <option value="<?= $usuario['Num_Documento']; ?>"><?= $usuario['Nombres']; ?></option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
+                       <!-- Proveedor -->
+<div class="mb-3 d-flex align-items-center">
+  <label for="Num_Documento" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Proveedor</label>
+  <select name="Num_Documento" id="Num_Documento" class="form-control border-primary rounded-3 shadow-sm"
+          style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    <option value="">Seleccione Proveedor...</option>
+    <?php foreach ($usuarios as $usuario): ?>
+      <option value="<?= $usuario['Num_Documento']; ?>"><?= $usuario['Nombres']; ?></option>
+    <?php endforeach; ?>
+  </select>
+</div>
+
 
                         <!-- Botón -->
                         <button class="btn btn-primary w-100 rounded-3 shadow-sm" type="submit" name="Acciones" value="Agregar Producto"
