@@ -2,9 +2,9 @@
 
 use PHPUnit\Framework\TestCase;
 
-require_once __DIR__ . '/../Modelo/Salida.php';
-require_once __DIR__ . '/../Modelo/Producto.php';
-include_once __DIR__ . '/../Modelo/Conexion.php';
+use __DIR__ . '/../Modelo/Salida.php';
+use __DIR__ . '/../Modelo/Producto.php';
+use __DIR__ . '/../Modelo/Conexion.php';
 class SalidaTest extends TestCase
 {
     protected $salida;
