@@ -107,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     });
                     
                 </script>
-                  </script>
+    
                 <?php
             }
             elseif ($RolidRol == 25) {
