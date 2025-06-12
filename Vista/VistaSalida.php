@@ -684,7 +684,7 @@ thead th {
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <select name="ProductoCodigo" id="ProductoCodigo" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" required>
+                        <select>
                             <option value="">Seleccione Producto...</option>
                             <?php while($row=mysqli_fetch_assoc($sqlp)){?>
                                 <option value="<?php echo $row['CodigoProducto']; ?>">
@@ -710,7 +710,6 @@ thead th {
                     <div class="mb-3 d-flex align-items-center">
                         <select name="Num_Documento_Empleado" id="Num_Documento_Empleado" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" required>
                             <option value="">Seleccione Empleado...</option>
-                            <?php while($row=mysqli_fetch_assoc($sqlpe)){?>
                                 <option value="<?php echo $row['Num_Documento']; ?>">
                                     <?php echo $row['Nombres']; ?>
                                 </option> 
