@@ -14,7 +14,7 @@ try {
             isset($_POST['FechaIngresoProducto']) &&
             isset($_POST['ProductoCodigoProducto']) &&
             isset($_POST['Cantidad']) &&
-            isset($_POST['Descripción']) &&
+            isset($_POST['Descripcion']) &&
             isset($_POST['PrecioIngreso']) &&
             isset($_POST['Empleado'])
         ) {
@@ -45,8 +45,8 @@ try {
         ) {
             $gestorIngreso->actualizarIngreso(
                 $_POST['idTicketIngreso'],
-                $_POST['FechaIngresoProducto'], 
-                $_POST['ProductoCodigoProducto'], 
+                $_POST['FechaIngresoProducto'],
+                $_POST['ProductoCodigoProducto'],
                 $_POST['Cantidad'],
                 $_POST['Descripción'],
                 $_POST['PrecioIngreso'],
