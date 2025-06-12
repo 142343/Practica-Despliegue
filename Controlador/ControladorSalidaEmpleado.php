@@ -42,5 +42,5 @@ try {
     exit();
 }
 
-include "../Vista/VistaSalidaEmpleado.php";
+include_once "../Vista/VistaSalidaEmpleado.php";
 ?>
