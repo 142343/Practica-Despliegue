@@ -550,8 +550,7 @@ thead th {
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Producto</label>
-                        <select name="ProductoCodigo" id="ProductoCodigo" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" required>
+                        <select>
                             <option value="">Seleccione Producto...</option>
                             <?php while($row=mysqli_fetch_assoc($sqlp)){?>
                                 <option value="<?php echo $row['CodigoProducto']; ?>">
@@ -576,8 +575,7 @@ thead th {
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Empleado</label>
-                        <select name="Num_Documento_Empleado" id="Num_Documento_Empleado" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" required>
+                        <select>
                             <option value="">Seleccione Empleado...</option>
                             <?php while($row=mysqli_fetch_assoc($sqlpe)){?>
                                 <option value="<?php echo $row['Num_Documento']; ?>">
