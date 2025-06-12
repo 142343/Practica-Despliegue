@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </script>
                 <?php
             } elseif ($RolidRol == 22) {
-                // Si es admin lo manda al panel del admin 
+                
                 ?>
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 <script>
@@ -69,13 +69,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         showConfirmButton: true,
                         confirmButtonText: "Aceptar"
                     }).then(function () {
-                        window.location = "../Opciones.php"; // Redirigir al panel del admin 
+                        window.location = "../Opciones.php";
                     });
                 </script>
                 <?php
             }
             elseif ($RolidRol == 23) {
-                // Si es propietario lo deja accder a todo 
+            
                 ?>
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 <script>
@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?php
             }
             elseif ($RolidRol == 25) {
-                // Si es Usuario lo redirigue al panel de espera 
+                // Si es Usuario lo redirigue al panel de espera
                 ?>
                 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
                 <script>
@@ -122,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         showConfirmButton: true,
                         confirmButtonText: "Aceptar"
                     }).then(function () {
-                        window.location = "../espera.html"; 
+                        window.location = "../espera.html";
                     });
                     
                 </script>
