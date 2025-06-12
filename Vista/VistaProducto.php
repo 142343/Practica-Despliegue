@@ -301,26 +301,29 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($productosEncontrados as $producto): ?>
-                        <tr>
-                            <td><?= !empty($producto['CodigoProducto']) ? htmlspecialchars($producto['CodigoProducto']) : 'No registra' ?></td>
-                            <td><?= !empty($producto['Nombre']) ? htmlspecialchars($producto['Nombre']) : 'No registra' ?></td>
-                            <td><?= isset($producto['Precio']) && $producto['Precio'] !== '' ? '$' . htmlspecialchars(number_format($producto['Precio'])) : 'No registra' ?></td>
-                            <td><?= !empty($producto['Stock']) ? htmlspecialchars($producto['Stock']) : 'No registra' ?></td>
-                            <td><?= !empty($producto['IVA']) ? htmlspecialchars($producto['IVA']) : 'No registra' ?></td>
-                            <td><?= !empty($producto['categoria']) ? htmlspecialchars($producto['categoria']) : 'No suministra' ?></td>
-                            <td><?= !empty($producto['estado']) ? htmlspecialchars($producto['estado']) : 'No suministra' ?></td>
-                            <td><?= !empty($producto['Descripcion']) ? htmlspecialchars($producto['Descripcion']) : 'No registra' ?></td>
-                            <td><?= !empty($producto['marcas']) ? htmlspecialchars($producto['marcas']) : 'No registra' ?></td>
-                            <td><?= !empty($producto['tallas']) ? htmlspecialchars($producto['tallas']) : 'No registra' ?></td>
-                            <td><?= !empty($producto['Nombres']) ? htmlspecialchars($producto['Nombres']) : 'No registra' ?></td>
+                   <?php
+const NO_REGISTRA = 'No registra';
+const NO_SUMINISTRA = 'No suministra';
+?>
 
-                            <td>
-                                <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updateModal<?= $producto['CodigoProducto'] ?>">Editar</button>
-                            </td>
-                        </tr>
-
-                    <?php endforeach; ?>
+<?php foreach ($productosEncontrados as $producto): ?>
+    <tr>
+        <td><?= !empty($producto['CodigoProducto']) ? htmlspecialchars($producto['CodigoProducto']) : NO_REGISTRA ?></td>
+        <td><?= !empty($producto['Nombre']) ? htmlspecialchars($producto['Nombre']) : NO_REGISTRA ?></td>
+        <td><?= isset($producto['Precio']) && $producto['Precio'] !== '' ? '$' . htmlspecialchars(number_format($producto['Precio'])) : NO_REGISTRA ?></td>
+        <td><?= !empty($producto['Stock']) ? htmlspecialchars($producto['Stock']) : NO_REGISTRA ?></td>
+        <td><?= !empty($producto['IVA']) ? htmlspecialchars($producto['IVA']) : NO_REGISTRA ?></td>
+        <td><?= !empty($producto['categoria']) ? htmlspecialchars($producto['categoria']) : NO_SUMINISTRA ?></td>
+        <td><?= !empty($producto['estado']) ? htmlspecialchars($producto['estado']) : NO_SUMINISTRA ?></td>
+        <td><?= !empty($producto['Descripcion']) ? htmlspecialchars($producto['Descripcion']) : NO_REGISTRA ?></td>
+        <td><?= !empty($producto['marcas']) ? htmlspecialchars($producto['marcas']) : NO_REGISTRA ?></td>
+        <td><?= !empty($producto['tallas']) ? htmlspecialchars($producto['tallas']) : NO_REGISTRA ?></td>
+        <td><?= !empty($producto['Nombres']) ? htmlspecialchars($producto['Nombres']) : NO_REGISTRA ?></td>
+        <td>
+            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#updateModal<?= $producto['CodigoProducto'] ?>">Editar</button>
+        </td>
+    </tr>
+<?php endforeach; ?>
                 </tbody>
             </table>
         </div>
@@ -372,19 +375,6 @@
                                 <i class="fas fa-phone"></i> +123456789
                             </a>
                         </li>
-                        <!-- Panel de Administración -->
-                        <li class="nav-item dropdown">
-                             <a 
-  class="nav-link dropdown-toggle" 
-  href="#" 
-  id="offcanvasNavbarDropdown" 
-  role="button" 
-  data-bs-toggle="dropdown" 
-  aria-expanded="false" 
-  style="font-family: 'Roboto', sans-serif; color: black;" 
-  onkeydown="if (event.key === 'Enter') this.click();"
->Panel de Administrador
-</a>
                             <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
                                 <li><a class="dropdown-item" href="#" style="color: black;"><i class="fas fa-users-cog"></i> Gestión de Usuarios</a></li>
                                 <li><a class="dropdown-item" href="#" style="color: black;"><i class="fas fa-database"></i> Gestión de Datos</a></li>
@@ -799,7 +789,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- Aquí se mantiene el modal como ya lo tienes (no es necesario repetir todo aquí) -->
                                 <?php endwhile; ?>
                             <?php else: ?>
                                 <tr>
