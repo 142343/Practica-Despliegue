@@ -712,7 +712,7 @@
                                     </div>
 
                                     <div class="mb-3 d-flex align-items-center">
-                                        <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Rol</label>
+                                        <label>Rol</label>
                                         <select name="RolidRol" id="RolidRol" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                                             <option value="">Seleccione el Rol...</option>
                                             <?php foreach ($rol as $rol): ?>
@@ -722,7 +722,7 @@
                                     </div>
 
                                     <div class="mb-3 d-flex align-items-center">
-                                        <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Estado</label>
+                                        <label>Estado</label>
                                         <select name="EstadoCodigoEstado" id="EstadoCodigoEstado" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                                             <option value="">Seleccione Estado...</option>
                                             <?php foreach ($estados as $estado): ?>
@@ -732,7 +732,7 @@
                                     </div>
 
                                     <div class="mb-3 d-flex align-items-center">
-                                        <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Genero</label>
+                                        <label>Genero</label>
                                         <select name="GeneroidGenero" id="GeneroidGenero" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                                             <option value="">Seleccione el Género...</option>
                                             <option value="1">Masculino</option>
