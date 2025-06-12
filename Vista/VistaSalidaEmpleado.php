@@ -550,14 +550,12 @@ thead th {
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
-                        <select>
                             <option value="">Seleccione Producto...</option>
                             <?php while($row=mysqli_fetch_assoc($sqlp)){?>
                                 <option value="<?php echo $row['CodigoProducto']; ?>">
                                 <?php echo $row['Nombre'] . ' - ' . $row['Stock']; ?>
                                 </option> 
-                            <?php } ?>  
-                        </select>
+                            <?php } ?>
                     </div>
 
                     <div class="mb-3 d-flex align-items-center">
@@ -577,7 +575,6 @@ thead th {
                     <div class="mb-3 d-flex align-items-center">
                         <select>
                             <option value="">Seleccione Empleado...</option>
-                            <?php while($row=mysqli_fetch_assoc($sqlpe)){?>
                                 <option value="<?php echo $row['Num_Documento']; ?>">
                                     <?php echo $row['Nombres']; ?>
                                 </option> 
