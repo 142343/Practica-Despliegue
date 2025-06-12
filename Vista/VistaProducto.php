@@ -747,13 +747,13 @@
                                                             </select>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Descripción</label>
+                                                           
                                                             <textarea class="form-control" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" name="Descripcion"
                                                                 required><?= $fila['Descripcion'] ?></textarea>
                                                         </div>
 
                                                         <div class="mb-3">
-                                                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Marca</label>
+                                                            
                                                             <select name="MarcasCodigoMarca" id="MarcasCodigoMarca" class="form-control"
                                                                 required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
 
@@ -765,7 +765,7 @@
                                                             </select>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Talla</label>
+                                                            <label>Talla</label>
                                                             <select name="TallasCodigoTallas" id="TallasCodigoTallas" class="form-control"
                                                                 required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                                                                 <?php foreach ($tallas as $talla): ?>
@@ -776,7 +776,7 @@
                                                             </select>
                                                         </div>
                                                         <div class="mb-3">
-                                                            <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Proveedor</label>
+                                                            <label>Proveedor</label>
                                                             <select name="Num_Documento" id="Num_Documento" class="form-control"
                                                                 required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
 
