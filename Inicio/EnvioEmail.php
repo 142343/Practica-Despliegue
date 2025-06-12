@@ -92,4 +92,4 @@ if (isset($_POST['submitContact']) && !empty($correo)) {
     echo "Correo no válido o faltante.";
     exit;
 }
-?>
+
