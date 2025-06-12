@@ -2,202 +2,226 @@
 <html lang="es">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="estilos.css">
-    <link rel="shortcut icon" href="Img/icono1.jpg" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <title>Principal - PATY SPORT</title>
+
 </head>
 
+
+<!-- Inicio de encabezado-->
+
 <body class="top-margin">
-    <!-- Navbar -->
     <nav class="navbar navbar-dark bg-dark">
+        <!-- Navbar content -->
         <div class="container-fluid">
-            <div class="d-flex align-items-center ms-2">
-                <a href="./Inicio/InicioSesionIndex.html" class="d-flex align-items-center text-decoration-none text-white">
-                    <i class="bi bi-person-circle fs-4 me-2"></i>
-                    <span class="fw-semibold">Iniciar Sesión</span>
-                </a>
-            </div>
-            <a class="navbar-brand mx-auto" href="#">Deporte & Estilo</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Menú</a>
+            <a class="navbar-brand" href="#">Deporte & Estilo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="Conocenos.html">Conócenos</a>
+                        <a class="nav-link active" aria-current="page" href="#">Iniciar sesión</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#58">Contáctanos</a>
+                        <a class="nav-link" href="#">Conocenos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#mapp">Donde encontrarnos</a>
+                        <a class="nav-link" href="#">Contactenos</a>
                     </li>
                 </ul>
+                <span class="navbar-text">
+                    Inventario
+                </span>
             </div>
         </div>
     </nav>
 
-    <!-- Botón WhatsApp -->
-    <div class="whatsapp-float" id="whatsapp-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </div>
+    <!-- Fin de encabezado-->
 
-    <!-- Botón Instagram -->
-    <div class="instagram-float" id="instagram-btn">
-        <a href="https://www.instagram.com/patysport90/profilecard/?igsh=MWl4cmpmcHdlbGI1bg%3D%3D" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-        </a>
-    </div>
 
-    <!-- Estilos Flotantes -->
-    <style>
-        .instagram-float, .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            z-index: 1000;
-            transition: transform 0.3s ease;
-        }
 
-        .instagram-float {
-            left: 20px;
-            background-color: #f0f0f0;
-        }
+    <!-- Inicio Barra de busqueda-->
 
-        .whatsapp-float {
-            right: 20px;
-            background-color: #25d366;
-        }
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid d-flex justify-content-center">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <!-- Fin Barra de busqueda-->
 
-        .instagram-float img,
-        .whatsapp-float img {
-            width: 35px;
-            height: 35px;
-        }
 
-        .instagram-float:hover,
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-    </style>
-
-    <!-- Script WhatsApp -->
-    <script>
-        document.getElementById("whatsapp-btn").addEventListener("click", function () {
-            window.open("https://wa.me/31022844319", "_blank");
-        });
-    </script>
-
-    <!-- Título animado -->
+    <!--Inicio de PATY SPORT en movimiento-->
     <div class="hero">
         <h1 class="texto">PATY SPORT</h1>
     </div>
+    <!--Fin de PATY SPORT en movimiento-->
 
-    <!-- Carrusel -->
+
+    <!--Inicio carrucel-->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="Img/rojo.png" class="d-block w-100" alt="...">
+                <img src="rojo.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="Img/banner2.png" class="d-block w-100" alt="...">
+                <img src="banner2.png" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="Img/banner.png" class="d-block w-100" alt="...">
+                <img src="banner.png" class="d-block w-100" alt="...">
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
+            <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
+            <span class="visually-hidden">Next</span>
         </button>
     </div>
 
-    <!-- Productos -->
-    <h1 class="heading3" style="background-color: #000000; color:#ffffff;"> Últimos <span> diseños </span> <span class="material-symbols-outlined" style="font-size: 30px;">laundry</span></h1>
-    <div class="container5">
-        <div class="row row-cols-1 row-cols-md-4 g-4">
-            <div class="col">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1542406775-ade58c52d2e4" class="card-img-top" alt="Sudadera Blanca">
+    <!--fin de carrusel-->
+
+
+    <!-- Inicio Servicios-->
+    <h1 class="heading"> Ultimos <span> diseños </span> </h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="sudaderablanca.jfif" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Conjunto Sudadera Blanca</h5>
-                        <p class="card-text">Perfecta para cualquier ocasión. Combina comodidad y estilo, ideal para un look casual.</p>
+                        <p class="card-text">Lindo conjunto de color blanco.</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images.unsplash.com/flagged/photo-1579014135854-c93594ffef30" class="card-img-top" alt="Sudadera Gris">
+
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="sudaderagris.jfif" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Conjunto Sudadera Gris</h5>
-                        <p class="card-text">Estilo moderno y minimalista. Cómoda y perfecta para jeans o leggings.</p>
+                        <p class="card-text">Lindo conjunto de color gris.</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1565693413579-8ff3fdc1b03b" class="card-img-top" alt="Sudadera Rosada">
+
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="sudaderanegra.jfif" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Conjunto Sudadera Rosada</h5>
-                        <p class="card-text">Vibrante y llena de energía. Ideal para destacar en días frescos.</p>
+                        <p class="card-text">Lindo conjunto de color negro.</p>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1542925581-8db3deffbebb" class="card-img-top" alt="Sudadera Negra">
+
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="sudaderarosada.jfif" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Conjunto Sudadera Negra</h5>
-                        <p class="card-text">Clásica y versátil. Combínala con cualquier atuendo para un look elegante.</p>
+                        <p class="card-text">Lindo conjunto de color rosado.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="sudaderaverde.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Lindo conjunto de color verde.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="sudaderazul.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Lindo conjunto de color azul.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="camisa.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Lindo conjunto de color azul.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="sacosnike.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Lindo conjunto de color azul.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Ubicación -->
-    <h1 class="heading3" id="mapp"> Donde <span> Ubicarnos </span></h1>
-    <div id="map" style="height: 400px;"></div>
-   
-    <script>
-        function initMap() {
-            const ubicacion = { lat: 4.6482837, lng: -74.2478947 };
-            const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 15,
-                center: ubicacion
-            });
-            const marker = new google.maps.Marker({
-                position: ubicacion,
-                map: map
-            });
-        }
-    </script>
+        <!-- Fin de catalogo-->
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYQZEu1o1rZ/bnzNyYOv4+2Qy5Ez9W0Hb6U8FnK" crossorigin="anonymous"></script>
+        <!--Inicio de misón y visión-->
+        <hr>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4 col-lg-6 ">
+                    <div class="cardd">
+                        <h5 class="card-header">Misión</h5>
+                        <div class="cardd">
+                            <p class="card-text">En Party Sport, nuestra misión es proporcionar ropa deportiva de alta
+                                calidad,cómoda y con estilo, diseñada parasatisfacer las necesidades y gustos de
+                                nuestros clientes. Nos comprometemos a ofrecer
+                                productosinnovadores y accesibles que inspiren confianza y comodidad en cada actividad
+                                física o evento casual.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-6">
+                    <div class="cardd">
+                        <h5 class="card-header">Visión</h5>
+                        <div class="cardd">
+                            <p class="card-text">Nuestra visión es convertirnos en la marca líder en ropa deportiva
+                                y casual reconocida por nuestra dedicación a la calidad, la moda y la satisfacción del
+                                cliente. Aspiramos a expandir nuestra presencia en el mercado nacional e internacional,
+                                estableciendo Party Sport como
+                                sinónimo de innovación, estilo y funcionalidad.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Fin de misón y visión-->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
 </body>
 
 </html>
