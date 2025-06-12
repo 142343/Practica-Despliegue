@@ -711,34 +711,7 @@
                                         <input class="form-control border-primary rounded-3 shadow-sm" id="Correo" name="Correo" type="email" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
                                     </div>
 
-                                    <div class="mb-3 d-flex align-items-center">
-                                        <label>Rol</label>
-                                        <select name="RolidRol" id="RolidRol" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-                                            <option value="">Seleccione el Rol...</option>
-                                            <?php foreach ($rol as $rol): ?>
-                                                <option value="<?= $rol['idRol']; ?>"><?= $rol['tipoRol']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3 d-flex align-items-center">
-                                        <label>Estado</label>
-                                        <select name="EstadoCodigoEstado" id="EstadoCodigoEstado" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-                                            <option value="">Seleccione Estado...</option>
-                                            <?php foreach ($estados as $estado): ?>
-                                                <option value="<?= $estado['CodigoEstado']; ?>"><?= $estado['tipoEstado']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                    </div>
-
-                                    <div class="mb-3 d-flex align-items-center">
-                                        <label>Genero</label>
-                                        <select name="GeneroidGenero" id="GeneroidGenero" class="form-control border-primary rounded-3 shadow-sm" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-                                            <option value="">Seleccione el Género...</option>
-                                            <option value="1">Masculino</option>
-                                            <option value="2">Femenino</option>
-                                        </select>
-                                    </div>
+                                    
 
 
                                     <button class="btn btn-primary w-100 rounded-3 shadow-sm" type="submit" name="Acciones" value="AgregarUsuario" style="background-color: #64ABEC; border-color: #64ABEC; padding: 0.6rem; font-size: 0.9rem;">Agregar Usuario</button>
