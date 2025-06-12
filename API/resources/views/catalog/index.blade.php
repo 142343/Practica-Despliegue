@@ -263,14 +263,11 @@ function eliminarProducto(id) {
                                         <h5 class="modal-title">Actualizar {{ $producto->Nombre }}</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                                     </div>
-                                    <div class="modal-body">
-                                        <form id="updateForm{{ $producto->CodigoProducto }}">
-                                            @csrf
-                                            <div class="mb-3">
-                                                <label class="form-label">Nombre</label>
-                                                <input type="text" class="form-control" name="Nombre" value="{{ $producto->Nombre }}">
-                                            </div>
-                                            <div class="mb-3">
+                                   <div class="mb-3">
+    <label for="nombre{{ $producto->CodigoProducto }}" class="etiqueta-de-formulario">Nombre</label>
+    <input type="text" id="nombre{{ $producto->CodigoProducto }}" class="form-control" name="Nombre" value="{{ $producto->Nombre }}">
+</div>
+                                      <div class="mb-3">
                                                 <label class="form-label">Descripción</label>
                                                 <textarea class="form-control" name="Descripcion">{{ $producto->Descripcion }}</textarea>
                                             </div>
