@@ -204,7 +204,7 @@ $sqlpe = $conexion->query($sqle);
 </style>
 
 
-        <center>
+    
 
 <div class="breadcrumbs shadow-1" style="background-color: #FFFFFFFF;" >
     <div class="container-o" >
