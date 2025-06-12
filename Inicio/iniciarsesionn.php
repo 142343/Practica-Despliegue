@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         showConfirmButton: true,
                         confirmButtonText: "Aceptar"
                     }).then(function () {
-                        window.location = "../Opciones.php"; 
+                        window.location = "../Opciones.php";
                     });
                 </script>
                 <?php
