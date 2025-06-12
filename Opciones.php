@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -213,7 +212,7 @@ $telefono = $_SESSION['telefono'] ?? '0000000000';
             <div class="card-body text-center">
                 <ul class="list-unstyled d-flex justify-content-center flex-row">
                     <li class="menu-item">
-                        <a href="Controlador/ControladorUsuario.php" class="btn btn-primary menu-button"  
+                        <a href="Controlador/ControladorUsuario.php" class="btn btn-primary menu-button"
                            style="border-radius: 25px; padding: 15px; background-color: #5bc0de; border: none; transition: background-color 0.3s, transform 0.3s; color: #000000; margin-right: 5px;">
                             <i class="fas fa-users" style="margin-right: 10px; color: #000000;"></i> Usuarios
                         </a>
@@ -225,13 +224,13 @@ $telefono = $_SESSION['telefono'] ?? '0000000000';
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="Controlador/ControladorIngreso.php" class="btn btn-primary menu-button" 
+                        <a href="Controlador/ControladorIngreso.php" class="btn btn-primary menu-button"
                            style="border-radius: 25px; padding: 15px; background-color: #5bc0de; border: none; transition: background-color 0.3s, transform 0.3s; color: #000000; margin-right: 5px;">
                             <i class="fas fa-ticket-alt" style="margin-right: 10px; color: #000000;"></i> Ticket de Entrada
                         </a>
                     </li>
                     <li class="menu-item">
-                        <a href="Controlador/ControladorSalida.php" class="btn btn-primary menu-button" 
+                        <a href="Controlador/ControladorSalida.php" class="btn btn-primary menu-button"
                            style="border-radius: 25px; padding: 15px; background-color: #5bc0de; border: none; transition: background-color 0.3s, transform 0.3s; color: #000000;">
                             <i class="fas fa-ticket-alt" style="margin-right: 10px; color: #000000;"></i> Ticket de Salida
                         </a>
@@ -240,7 +239,7 @@ $telefono = $_SESSION['telefono'] ?? '0000000000';
             </div>
             <hr style="border: none; height: 5px; background: linear-gradient(to right, transparent, black, transparent); width: 50%; margin: 20px auto 10px; box-shadow: 0 0 10px black;" />
             </center>
-    </div>                
+    </div>             
 </div>
 
 
@@ -292,10 +291,7 @@ $telefono = $_SESSION['telefono'] ?? '0000000000';
     crossorigin="anonymous"></script>
 
 <!-- Option 2: Separate Popper and Bootstrap JS -->
-<!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+
 </body>
 
 </html>
