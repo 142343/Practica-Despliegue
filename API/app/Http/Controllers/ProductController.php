@@ -8,64 +8,81 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-//Actualizar campo en especifico con su id
     public function campoUpdate(Request $request, $id)
     {
-        info('Solicitud de actualización parcial', [  
-            'id' => $id,  
-            'data' => $request->all()  
-        ]);  
-    
+        info('Solicitud de actualización parcial', [
+            'id' => $id,
+            'data' => $request->all()
+        ]);
+
+        $response = [];
+
         try {
             $product = Product::findOrFail($id);
+
             $validatedData = $request->validate([
                 'field' => 'required|string',
                 'value' => 'required'
             ]);
-    
+
             $allowedFields = [
                 'Nombre' => 'string|max:255',
-                'Descripcion' => 'string',
-                'Precio' => 'numeric',
-                'Stock' => 'numeric',
-                'IVA' => 'numeric'
+                'Precio' => 'numeric|min:0',
+                'Cantidad' => 'integer|min:0',
+                // agrega más campos si lo necesitas
             ];
-    
+
             $field = $validatedData['field'];
             $value = $validatedData['value'];
-    
+
             if (!array_key_exists($field, $allowedFields)) {
-                return response()->json([
-                    'success' => false,
-                    'message' => 'Campo no permitido para actualización'
-                ], 400);
+                $response = [
+                    'data' => [
+                        'success' => false,
+                        'message' => 'Campo no permitido para actualización'
+                    ],
+                    'status' => 400
+                ];
+            } else {
+                $request->validate([
+                    $field => $allowedFields[$field]
+                ]);
+
+                $product->$field = $value;
+                $product->save();
+
+                $response = [
+                    'data' => [
+                        'success' => true,
+                        'message' => 'Campo actualizado exitosamente',
+                        'product' => $product
+                    ],
+                    'status' => 200
+                ];
             }
-    
-            $request->validate([
-                $field => $allowedFields[$field]
-            ]);
-    
-            $product->$field = $value;
-            $product->save();
-            
-            return response()->json([  
-                'success' => true,  
-                'message' => 'Campo actualizado exitosamente',  
-                'product' => $product  
-            ]);  
+
         } catch (\Illuminate\Validation\ValidationException $e) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Error de validación',
-                'errors' => $e->errors()
-            ], 422);
-        } catch (\Exception $e) {  
-            return response()->json([  
-                'success' => false,  
-                'message' => 'Error: ' . $e->getMessage()  
-            ], 500);  
-        }  
+            $response = [
+                'data' => [
+                    'success' => false,
+                    'message' => 'Error de validación',
+                    'errors' => $e->errors()
+                ],
+                'status' => 422
+            ];
+        } catch (\Exception $e) {
+            $response = [
+                'data' => [
+                    'success' => false,
+                    'message' => 'Error: ' . $e->getMessage()
+                ],
+                'status' => 500
+            ];
+        }
+
+        return response()->json($response['data'], $response['status']);
     }
+}
 
 //Eliminar producto con su id
     public function destroy($id)
