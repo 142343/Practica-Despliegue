@@ -590,81 +590,63 @@
                                                         <form action="../Controlador/ControladorUsuario.php" method="post">
                                                             <input type="hidden" name="Num_Documento" value="<?= $fila['Num_Documento'] ?>">
                                                             <div class="mb-3">
-                                                                <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Tipo de Documento</label>
-                                                                <select class="form-control" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" name="Tipo_Documento">
-                                                                    <option value="" disabled selected>Selecciona un tipo</option>
-                                                                    <option value="C.C" <?= $fila['Tipo_Documento'] == 'C.C' ? 'selected' : '' ?>>C.C</option>
-                                                                    <option value="T.I" <?= $fila['Tipo_Documento'] == 'T.I' ? 'selected' : '' ?>>T.I</option>
-                                                                    <option value="PPT" <?= $fila['Tipo_Documento'] == 'PPT' ? 'selected' : '' ?>>PPT</option>
-                                                                    <option value="C.E" <?= $fila['Tipo_Documento'] == 'C.E' ? 'selected' : '' ?>>C.E</option>
-                                                                </select>
-                                                            </div>
+                                                                <label for="Tipo_Documento" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Tipo de Documento</label>
+        <select id="Tipo_Documento" name="Tipo_Documento" class="form-control" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+            <option value="" disabled selected>Seleccione un tipo</option>
+            <option value="CC" <?= $fila['Tipo_Documento'] == 'CC' ? 'selected' : '' ?>>CC</option>
+            <option value="TI" <?= $fila['Tipo_Documento'] == 'TI' ? 'selected' : '' ?>>TI</option>
+            <option value="PPT" <?= $fila['Tipo_Documento'] == 'PPT' ? 'selected' : '' ?>>PPT</option>
+            <option value="CE" <?= $fila['Tipo_Documento'] == 'CE' ? 'selected' : '' ?>>CE</option>
+        </select>
+    </div>
 
+    <!-- Número de Documento -->
+    <div class="mb-3 d-flex align-items-center">
+        <label for="Numero_Documento" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Número de Documento</label>
+        <input type="number" id="Numero_Documento" name="Numero_Documento" class="form-control" required value="<?= $fila['Numero_Documento'] ?>" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    </div>
 
+    <!-- Nombres -->
+    <div class="mb-3 d-flex align-items-center">
+        <label for="Nombres" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Nombres</label>
+        <input type="text" id="Nombres" name="Nombres" class="form-control" required value="<?= $fila['Nombres'] ?>" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    </div>
 
-                                                            <div class="mb-3">
-                                                                <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Nombres</label>
-                                                                <input class="form-control" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" name="Nombres"
-                                                                    value="<?= $fila['Nombres'] ?>" required>
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Apellidos</label>
-                                                                <input type="text" class="form-control" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" name="Apellidos"
-                                                                    value="<?= $fila['Apellidos'] ?>" required>
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Teléfono</label>
-                                                                <input type="number" class="form-control" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" name="Teléfono"
-                                                                    value="<?= $fila['Teléfono'] ?>" required>
-                                                            </div>
-                                                            <div class="mb-3">
-                                                                <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Correo</label>
-                                                                <input type="email" class="form-control" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;" name="Correo"
-                                                                    value="<?= $fila['Correo'] ?>" required>
-                                                            </div>
+    <!-- Apellidos -->
+    <div class="mb-3 d-flex align-items-center">
+        <label for="Apellidos" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Apellidos</label>
+        <input type="text" id="Apellidos" name="Apellidos" class="form-control" required value="<?= $fila['Apellidos'] ?>" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    </div>
 
-                                                            <div class="mb-3">
-                                                                <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Rol</label>
-                                                                <select name="RolidRol" id="RolidRol" class="form-control" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    <!-- Teléfono -->
+    <div class="mb-3 d-flex align-items-center">
+        <label for="Telefono" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Teléfono</label>
+        <input type="number" id="Telefono" name="Telefono" class="form-control" required value="<?= $fila['Telefono'] ?>" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    </div>
 
-                                                                    <?php foreach ($rol as $rool): ?>
-                                                                        <option value="<?= $rool['idRol']; ?>" <?= ($rool['tipoRol'] == $fila['RolidRol'] ? 'selected' : '') ?>>
-                                                                            <?= $rool['tipoRol']; ?>
-                                                                        </option>
-                                                                    <?php endforeach; ?>
-                                                                </select>
-                                                            </div>
+    <!-- Correo Electrónico -->
+    <div class="mb-3 d-flex align-items-center">
+        <label for="Correo_Electronico" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Correo Electrónico</label>
+        <input type="email" id="Correo_Electronico" name="Correo_Electronico" class="form-control" required value="<?= $fila['Correo_Electronico'] ?>" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    </div>
 
+    <!-- Dirección -->
+    <div class="mb-3 d-flex align-items-center">
+        <label for="Direccion" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Dirección</label>
+        <input type="text" id="Direccion" name="Direccion" class="form-control" required value="<?= $fila['Direccion'] ?>" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    </div>
 
-                                                            <div class="mb-3">
-                                                                <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Estado</label>
-                                                                <select name="EstadoCodigoEstado" id="EstadoCodigoEstado" class="form-control" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    <!-- Contraseña -->
+    <div class="mb-3 d-flex align-items-center">
+        <label for="Contraseña" class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Contraseña</label>
+        <input type="password" id="Contraseña" name="Contraseña" class="form-control" required value="<?= $fila['Contraseña'] ?>" style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
+    </div>
 
-                                                                    <?php foreach ($estados as $estado): ?>
-                                                                        <option value="<?= $estado['CodigoEstado']; ?>" <?= ($estado['tipoEstado'] == $fila['EstadoCodigoEstado'] ? 'selected' : '') ?>>
-                                                                            <?= $estado['tipoEstado']; ?>
-                                                                        </option>
-                                                                    <?php endforeach; ?>
-                                                                </select>
-                                                            </div>
-
-                                                            <div class="mb-3">
-                                                                <label class="form-label" style="color: #ffffff; font-size: 0.9rem; width: 40%;">Genero</label>
-                                                                <select name="GeneroidGenero" id="GeneroidGenero" class="form-control" required style="border: 2px solid #ffffff; border-radius: 0.3rem; padding: 0.4rem; font-size: 0.9rem; width: 60%;">
-
-                                                                    <?php foreach ($genero as $generoo): ?>
-                                                                        <option value="<?= $generoo['idGenero']; ?>" <?= ($generoo['Nombre'] == $fila['GeneroidGenero'] ? 'selected' : '') ?>>
-                                                                            <?= $generoo['Nombre']; ?>
-                                                                        </option>
-                                                                    <?php endforeach; ?>
-                                                                </select>
-                                                            </div>
-
-
-
-                                                            <button type="submit" class="btn btn-primary" name="Acciones"
-                                                                value="ActualizarUsuario" style="background-color: #64ABEC; border-color: #64ABEC; padding: 0.6rem; font-size: 0.9rem;">Actualizar</button>
-                                                        </form>
+    <!-- Botón de Enviar -->
+    <div class="text-center mt-4">
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+</form>
                                                     </div>
                                                 </div>
                                             </div>
