@@ -1,6 +1,9 @@
 <?php  
 require_once '../Modelo/Salida.php';  
 
+// Definir excepción personalizada para errores de validación
+class DatosFormularioInvalidosException extends Exception {}
+
 $gestorSalida = new Salida();
 $producto = $gestorSalida->ConsultarProducto();
 
@@ -16,7 +19,7 @@ try {
 
         // Validar que todos los campos sean válidos
         if (!$fechaSalida || $cantidad === false || !$productoCodigo || !$documentoEmpleado) {
-            throw new Exception("Datos del formulario inválidos.");
+            throw new DatosFormularioInvalidosException("Datos del formulario inválidos.");
         }
 
         // Ejecutar la función para registrar la salida
@@ -31,12 +34,15 @@ try {
     } else {
         $resultado = $gestorSalida->consultarSalida(); 
     }
+} catch (DatosFormularioInvalidosException $e) {
+    // Error específico de validación
+    error_log("[" . date('Y-m-d H:i:s') . "] Validación en ControladorSalida.php: " . $e->getMessage());
+    exit("Error en los datos enviados. Por favor, revise el formulario.");
 } catch (Exception $e) {
-    // Registrar error en el log del servidor, sin mostrar datos al usuario
-    error_log("Error en ControladorSalida.php: " . $e->getMessage());
+    // Error general
+    error_log("[" . date('Y-m-d H:i:s') . "] Error general en ControladorSalida.php: " . $e->getMessage());
     exit("Ha ocurrido un error. Por favor, contacte al administrador.");
 }
-
 
 include "../Vista/VistaSalida.php";  
 ?>
